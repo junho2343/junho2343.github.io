@@ -54,15 +54,12 @@ function App() {
                                     {one.skill.map((one, index) => (
                                         <Icon target={one} key={index} />
                                     ))}
-                                    {/* <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white" /> */}
                                 </div>
                             </div>
                         ))}
                     </div>
                 ))}
             </div>
-
-            {/* @번개장터 2016.11 ~ 2017.06 */}
         </div>
     );
 }

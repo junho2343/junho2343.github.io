@@ -101,10 +101,10 @@ const data = {
                 {
                     name: 'EMP 솔루션 유지보수',
                     period: '2018.10 ~ 2019.12',
-                    detail: `EMP 솔루션 내 엔진 유지보수 :<br/>
+                    detail: `
                     스크랩핑 or API 연동으로 이루어진 쇼핑몰과의 HTTP 통신 부분을 유지보수<br/>
                     HTTP 통신 및 다양한 쇼핑몰별 구조, e-commerce 시장에 대한 이해도 증가
-                    
+                    10년을 넘게 서비스해온 솔루션 이기에 유지보수의 중요성을 깨달음
                         `,
                     skill: ['C Sharp', 'PHP', 'JavaScript', 'jQuery']
                 }
