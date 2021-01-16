@@ -1,0 +1,32 @@
+$mainColor: #87bd5e;
+
+$maxContainerwidth: 1024px;
+$minContainerwidth: 320px;
+
+// 글로벌 스타일
+@import './global.scss';
+
+//  스타일
+@import './style.scss';
+
+// 화면 너비별 폰트 크기 설정
+@mixin fontSizeAll($targetSize) {
+    * {
+        font-size: $targetSize;
+    }
+}
+
+// 모바일
+@media screen and (max-width: 720px) {
+    @include fontSizeAll(14px);
+}
+
+// 태블릿
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    @include fontSizeAll(16px);
+}
+
+// 데스크탑
+@media screen and (min-width: 1024px) {
+    @include fontSizeAll(18px);
+}
