@@ -67,6 +67,7 @@ function Icons({ target }) {
             {iconMapData[target] && (
                 <img
                     src={`https://img.shields.io/badge/${target}-${iconMapData[target].background}?style=flat-square&logo=${target}&logoColor=${iconMapData[target].color}`}
+                    alt={target}
                 />
             )}
         </>

@@ -109,29 +109,6 @@ const data = {
                     skill: ['C Sharp', 'PHP', 'JavaScript', 'jQuery']
                 }
             ]
-        },
-        {
-            name: '@플레이오토',
-            data: [
-                {
-                    name: '쿠팡 상품 이전 웹 서비스 개발',
-                    period: '2020.07 ~ 현재',
-                    detail: `최소한의 정보로 타 마켓에서 판매중인 상품을 쿠팡 Wing 으로 이전할 수 있는 웹 서비스를 개발하여 쿠팡에 제공<br/>
-                        쿠팡측과 지속 소통을 하며 협업중`,
-                    skill: [
-                        'React',
-                        'Next.js',
-                        'Node.js',
-                        'Express',
-                        'Socket.io',
-                        'Sass',
-                        'C Sharp',
-                        'Amazon AWS',
-                        'Mysql',
-                        'JSON Web Tokens'
-                    ]
-                }
-            ]
         }
     ]
 };
