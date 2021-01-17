@@ -13,7 +13,7 @@ function App() {
         <div className="container">
             <div className="title">
                 <h3>
-                    JUNHO MUN<span>Developer</span>
+                    JUNHO MOON<span>Developer</span>
                 </h3>
             </div>
             <div className="box profile">
