@@ -1,3 +1,5 @@
+// import ReDoc from '../images/ReDoc.png';
+
 const iconMapData = {
     React: {
         background: '61DAFB',
@@ -58,17 +60,33 @@ const iconMapData = {
     'Material-UI': {
         background: '0081CB',
         color: 'white'
+    },
+    'OpenAPI Initiative': {
+        background: '6BA539',
+        color: 'white'
     }
 };
 
+// const notExsitsIconMapData = {
+//     ReDoc: {
+//         img: ReDoc,
+//         imgBackground: 'white',
+//         background: '#7c8392',
+//         color: 'white'
+//     }
+// };
+
 function Icons({ target }) {
+    // console.log(notExsitsIconMapData[target].ReDoc);
     return (
         <>
-            {iconMapData[target] && (
+            {iconMapData[target] ? (
                 <img
                     src={`https://img.shields.io/badge/${target}-${iconMapData[target].background}?style=flat-square&logo=${target}&logoColor=${iconMapData[target].color}`}
                     alt={target}
                 />
+            ) : (
+                <span className="notExsitsIcon">{target}</span>
             )}
         </>
     );

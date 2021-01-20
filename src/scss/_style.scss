@@ -70,11 +70,34 @@
                 }
             }
             > div {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
                 padding-top: 15px;
                 > img {
-                    margin-right: 3px;
+                    margin: 0 3px 3px 0;
                 }
             }
         }
     }
+}
+
+.notExsitsIcon {
+    font-size: 10px;
+    color: white;
+    background: #7c8392;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    margin: 0 3px 3px 0;
+
+    // > span {
+    //     border-radius: 50%;
+    //     > img {
+    //         // width: 10px;
+    //         height: 15px;
+    //     }
+    // }
+
+    // background: ;
 }

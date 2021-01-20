@@ -63,7 +63,7 @@ const data = {
                         여러 영역 중 API 부분을 맡아 개발<br/>
                         플레이오토 내 저장된 쇼핑몰 계정정보를 셀러봇캐시 측에 REST API 로 제공
                         `,
-                    skill: ['Node.js', 'Express', 'Mysql']
+                    skill: ['Node.js', 'Express', 'Mysql', 'OpenAPI Initiative', 'ReDoc']
                 },
                 {
                     name: '펀앤쇼핑 쇼핑몰 엔진 연동 개발',
@@ -79,7 +79,7 @@ const data = {
                     detail: `플레이오토 내 존재하는 여러 페이지 및 계정정보를 통합하는 과정에서 EMP 솔루션 부분 API 개발<br/>
                     타 팀과의 협업을 통해 진행
                         `,
-                    skill: ['PHP', 'Mysql']
+                    skill: ['PHP', 'Mysql', 'OpenAPI Initiative', 'ReDoc']
                 },
                 {
                     name: 'EMP 솔루션 내 세트 영역 리펙토링',
