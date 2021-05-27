@@ -1,0 +1,56 @@
+import { MouseEventHandler, ReactNode, useState } from "react";
+import styled from "styled-components";
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import Grid from "../../atom/Grid";
+
+interface IProps {
+  open?: boolean;
+  height: number;
+  title: ReactNode;
+  content: ReactNode;
+}
+
+const AccordionTitle = styled(Grid)<{ onClick: MouseEventHandler }>`
+  cursor: pointer;
+`;
+
+const AccordionWrap = styled(Grid)`
+  /* max-height: 50px; */
+  /* transition: 0.3s; */
+  overflow: hidden;
+`;
+
+const ArrowWrap = styled(Grid)`
+  position: absolute;
+  right: 5px;
+`;
+
+function Accordion({ open, height, title, content }: IProps) {
+  const [expanded, setExpanded] = useState(open);
+
+  return (
+    <>
+      <AccordionWrap height={expanded ? "" : height}>
+        <AccordionTitle
+          display="flex"
+          alignItems="center"
+          height={height}
+          relative
+          onClick={() => {
+            console.log(expanded, !expanded);
+            setExpanded(!expanded);
+          }}
+        >
+          {title}
+          <ArrowWrap width={20} display="flex" alignItems="center">
+            {expanded ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
+          </ArrowWrap>
+        </AccordionTitle>
+
+        <Grid>{content}</Grid>
+      </AccordionWrap>
+    </>
+  );
+}
+
+export default Accordion;
