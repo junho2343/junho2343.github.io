@@ -7,7 +7,11 @@ import Project from "../../UI/organisms/Project";
 
 import data from "../../../data";
 
+import test from "simple-icons";
+
 function About() {
+  // console.log(Object.keys(test).join(","));
+  console.log(test["nextdotjs"]);
   return (
     <>
       <Grid top={40}>

@@ -17,14 +17,27 @@ a {
 }
 ul,
 li {
-    list-style: none;
+    list-style: square;
 }
 // 모바일
-@media ${({ theme }) => theme.device.mobile} {
+/* @media ${({ theme }) => theme.device.mobile} {
+    * {
+        font-size:14px;
+    }
+} */
+
+@media screen and (max-width: 400px) {
+    * {
+        font-size:13px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 480px) {
     * {
         font-size:14px;
     }
 }
+
 // 태블릿
 @media ${({ theme }) => theme.device.tablet} {
     * {

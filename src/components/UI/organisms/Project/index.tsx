@@ -1,8 +1,8 @@
 import Grid from "../../atom/Grid";
 import Text from "../../atom/Text";
-import Icon from "../../atom/Icon";
 import TitleWrap from "../../molecules/TitleWrap";
 import Accordion from "../../molecules/Accordion";
+import ProjectWrap from "../../molecules/ProjectWrap";
 
 import { ProjectType } from "../../../../data";
 
@@ -15,7 +15,12 @@ function Project({ data }: IProps) {
     <>
       <TitleWrap title="PROJECT" />
 
-      <Grid top={30} />
+      <Grid top={10} />
+      {/* <Text fontSize="0.85rem" color="#8d8d8d">
+        프로젝트 마우스 오버시 상세내역 확인 가능
+      </Text> */}
+
+      <Grid top={20} />
 
       {data.map((one, index) => (
         <Grid key={index}>
@@ -26,31 +31,7 @@ function Project({ data }: IProps) {
             content={
               <>
                 {one.data.map((one, index) => (
-                  <Grid top={30} bottom={20} key={index}>
-                    <Grid bottom={10}>
-                      <Text fontSize="1.4rem" fontWeight={200} inline>
-                        {one.name}
-                      </Text>
-
-                      <Grid display="inline-block" left={10} />
-                      <Grid
-                        display="inline-block"
-                        color="#f9e7e6"
-                        left={4}
-                        right={4}
-                      >
-                        <Text fontSize="0.9rem">{one.period}</Text>
-                      </Grid>
-                    </Grid>
-
-                    <Text dangerouslySetInnerHTML={{ __html: one.detail }} />
-
-                    <Grid top={15}>
-                      {one.skill.map((one, index) => (
-                        <Icon target={one} key={index} />
-                      ))}
-                    </Grid>
-                  </Grid>
+                  <ProjectWrap data={one} key={index} />
                 ))}
               </>
             }

@@ -37,7 +37,6 @@ function Accordion({ open, height, title, content }: IProps) {
           height={height}
           relative
           onClick={() => {
-            console.log(expanded, !expanded);
             setExpanded(!expanded);
           }}
         >

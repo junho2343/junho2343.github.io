@@ -34,7 +34,7 @@ interface IProps {
 
   relative?: boolean;
 }
-const GridTag = styled.div<IProps>`
+const Box = styled.div<IProps>`
   // 디스플레이 유형
   ${({ display }) => (display ? `display: ${display};` : "")}
 
@@ -81,8 +81,8 @@ const GridTag = styled.div<IProps>`
   ${({ relative }) => (relative ? `position: relative` : "")}
 `;
 
-function Grid(props: IProps) {
-  return <GridTag {...props} />;
-}
+// function Grid(props: IProps) {
+//   return <GridTag {...props} />;
+// }
 
-export default Grid;
+export default Box;
