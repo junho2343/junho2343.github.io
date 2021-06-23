@@ -34,7 +34,14 @@ jobs:
       # 사용 모듈 설치
       - name: Install Dependencies
         run: npm install
+        
+      # 정적 파일로 빌드
+      - name: build 
+        run: npm run build
 
-      # gh-pages 활용한 배포
-      - name: gh-pages Deploy
-        run: npm run deploy
+      # gh-pages 통한 배포
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
