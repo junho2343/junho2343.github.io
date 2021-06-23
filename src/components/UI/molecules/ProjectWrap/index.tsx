@@ -3,7 +3,6 @@ import Text from "../../atom/Text";
 import Icon from "../../atom/Icon";
 import { ProjectOneType } from "../../../../data";
 import styled from "styled-components";
-import { useState } from "react";
 import Accordion from "../Accordion";
 
 interface IProps {

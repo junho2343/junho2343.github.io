@@ -44,8 +44,12 @@ const data: IProps = {
     },
     {
       name: "연락처",
-      value: " 010-2105-8667",
+      value: "010-2105-8667",
     },
+    // {
+    //   name: "이메일",
+    //   value: "junho234323@gmail.com",
+    // },
     {
       name: "짧은소개",
       value: "단축키를 애용하며, 심플한 개발을 위해 노력합니다",

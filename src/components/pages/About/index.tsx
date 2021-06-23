@@ -7,15 +7,14 @@ import Project from "../../UI/organisms/Project";
 
 import data from "../../../data";
 
-import test from "simple-icons";
-
 function About() {
-  // console.log(Object.keys(test).join(","));
-  console.log(test["nextdotjs"]);
   return (
     <>
       <Grid top={40}>
-        <TitleWrap title="JUNHO MOON" subject="Developer" />
+        {/* <TitleWrap title="JUNHO MOON" subject="Developer" /> */}
+        <TitleWrap title="JUNHO2343" subject="Software Engineer" />
+        {/* <TitleWrap title="SOFTWARE ENGINEER" /> */}
+        {/* <TitleWrap title="JUNHO2343" /> */}
 
         <Grid top={40} />
         <Profile data={data.profile} />
