@@ -26,7 +26,8 @@ const MenuMobile = styled.div<{ menuActive: boolean }>`
     opacity: ${({ menuActive }) => (menuActive ? "1" : "0")};
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    z-index: 9;
     top: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -37,7 +38,8 @@ const MenuMobile = styled.div<{ menuActive: boolean }>`
     width: 40%;
     height: 100vh;
     float: right;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 0;
     right: ${({ menuActive }) => (menuActive ? "0" : "-100%")};
     background: white;

@@ -307,7 +307,7 @@ const data: IProps = {
 };
 
 // 게시물 최신순 정렬
-data.posts.sort((a, b) => {
+data.posts = data.posts.sort((a, b) => {
   return +new Date(b.date) - +new Date(a.date);
 });
 
