@@ -2,6 +2,7 @@ import { CareerType } from "../../../../data";
 import Grid from "../../atom/Grid";
 import Text from "../../atom/Text";
 import TitleWrap from "../../molecules/TitleWrap";
+import PeriodWrap from "../../molecules/PeriodWrap";
 
 interface IProps {
   data: CareerType;
@@ -18,10 +19,7 @@ function Career({ data }: IProps) {
               {one.name}
             </Text>
           </a>
-          <Grid display="inline-block" left={10} />
-          <Grid display="inline-block" color="#f9e7e6" left={4} right={4}>
-            <Text fontSize="0.9rem">{one.period}</Text>
-          </Grid>
+          <PeriodWrap period={one.period} />
         </Grid>
       ))}
     </>

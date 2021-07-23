@@ -1,4 +1,5 @@
 import { IconType } from "../components/UI/atom/Icon";
+import worldSkills from "../images/world-skills.png";
 
 export type ProfileType = {
   name: string;
@@ -26,10 +27,18 @@ export type ProjectOneType = {
   skill: IconType[];
 };
 
+export type PostType = {
+  title: string;
+  date: string;
+  content: string;
+  thumbnail?: string;
+};
+
 interface IProps {
   profile: ProfileType;
   career: CareerType;
   project: ProjectType;
+  posts: PostType[];
 }
 
 const data: IProps = {
@@ -250,6 +259,24 @@ const data: IProps = {
       ],
     },
   ],
+  posts: [
+    {
+      title: "2018년도 기능경기대회 회고",
+      date: "2021.07.23",
+      content: "functional-competition",
+      thumbnail: worldSkills,
+    },
+    {
+      title: "테스트2",
+      date: "2022.01.01",
+      content: "test",
+    },
+    {
+      title: "테스트1",
+      date: "2034.01.01",
+      content: "test",
+    },
+  ],
   // wine: [
   //   {
   //     name: {
@@ -278,5 +305,10 @@ const data: IProps = {
   //   },
   // ],
 };
+
+// 게시물 최신순 정렬
+data.posts.sort((a, b) => {
+  return +new Date(b.date) - +new Date(a.date);
+});
 
 export default data;

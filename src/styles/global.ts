@@ -6,18 +6,22 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
     box-sizing: border-box;
-    color:#333;
+    /* color:#333; */
     letter-spacing: 0.5px;
 }
 a {
     text-decoration: none;
+    :hover{
+        text-decoration: underline;
+
+    }
     color: inherit;
     /* display:inline-block; */
     /* width: 100%; */
 }
 ul,
 li {
-    list-style: square;
+    /* list-style: square; */
 }
 // 모바일
 /* @media ${({ theme }) => theme.device.mobile} {

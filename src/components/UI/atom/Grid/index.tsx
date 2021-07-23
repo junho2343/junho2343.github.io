@@ -6,7 +6,7 @@ interface IProps {
   children?: ReactNode;
 
   // 디스플레이 유형
-  display?: "inline-block" | "flex" | "inline-flex";
+  display?: "inline-block" | "flex" | "inline-flex" | "none";
 
   // flex 방향
   direction?: "row" | "column";
@@ -23,6 +23,12 @@ interface IProps {
   left?: number;
   right?: number;
 
+  // 마진
+  mt?: number;
+  mb?: number;
+  ml?: number;
+  mr?: number;
+
   // 가로
   width?: number;
 
@@ -33,6 +39,9 @@ interface IProps {
   color?: string;
 
   relative?: boolean;
+
+  // 선
+  border?: string;
 }
 const Box = styled.div<IProps>`
   // 디스플레이 유형
@@ -53,6 +62,12 @@ const Box = styled.div<IProps>`
   ${({ bottom }) => (bottom ? `padding-bottom: ${bottom}px;` : "")}
   ${({ left }) => (left ? `padding-left: ${left}px;` : "")}
   ${({ right }) => (right ? `padding-right: ${right}px;` : "")}
+
+  // 마진
+  ${({ mt }) => (mt ? `margin-top: ${mt}px;` : "")}
+  ${({ mb }) => (mb ? `margin-bottom: ${mb}px;` : "")}
+  ${({ ml }) => (ml ? `margin-left: ${ml}px;` : "")}
+  ${({ mr }) => (mr ? `margin-right: ${mr}px;` : "")}
 
   // 가로
   width: ${({ display }) =>
@@ -76,9 +91,13 @@ const Box = styled.div<IProps>`
       : ""}
 
   // 배경색상
-  ${({ color }) => (color ? `background-color: ${color}` : "")}
+  background-color: ${({ color, theme }) =>
+    color === "main" ? theme.mainColor : color ? color : "none"};
 
   ${({ relative }) => (relative ? `position: relative` : "")}
+
+  // 선
+  ${({ border }) => (border ? `border: ${border};` : "")}
 `;
 
 // function Grid(props: IProps) {

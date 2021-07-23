@@ -10,9 +10,9 @@ import data from "../../../data";
 function About() {
   return (
     <>
-      <Grid top={40}>
+      <Grid>
         {/* <TitleWrap title="JUNHO MOON" subject="Developer" /> */}
-        <TitleWrap title="JUNHO2343" subject="Software Engineer" />
+        {/* <TitleWrap title="JUNHO2343" subject="Software Engineer" /> */}
         {/* <TitleWrap title="SOFTWARE ENGINEER" /> */}
         {/* <TitleWrap title="JUNHO2343" /> */}
 
