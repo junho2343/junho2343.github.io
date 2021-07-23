@@ -4,7 +4,7 @@
 import Grid from "../../UI/atom/Grid";
 import data from "../../../data";
 import { Link } from "react-router-dom";
-import PeriodWrap from "../../UI/molecules/PeriodWrap";
+// import PeriodWrap from "../../UI/molecules/PeriodWrap";
 import Text from "../../UI/atom/Text";
 import Line from "../../UI/atom/Line";
 

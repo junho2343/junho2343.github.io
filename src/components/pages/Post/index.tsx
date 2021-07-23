@@ -25,7 +25,7 @@ export default function Post() {
     }
 
     fetchData();
-  }, []);
+  }, [content]);
 
   return (
     <>

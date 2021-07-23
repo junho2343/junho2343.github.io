@@ -1,6 +1,5 @@
 import Grid from "../../UI/atom/Grid";
 
-import TitleWrap from "../../UI/molecules/TitleWrap";
 import Profile from "../../UI/organisms/Profile";
 import Career from "../../UI/organisms/Career";
 import Project from "../../UI/organisms/Project";
