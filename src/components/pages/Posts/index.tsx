@@ -31,9 +31,14 @@ export default function Posts() {
                 )}
               </Grid>
 
-              <Text fontSize="1.4rem" fontWeight={300} inline>
-                {one.title}
-              </Text>
+              <Grid>
+                <Text fontSize="1.4rem" fontWeight={300} inline>
+                  {one.title}
+                </Text>
+                <Text fontSize="0.8rem" color="#777">
+                  {one.date}
+                </Text>
+              </Grid>
               {/* <PeriodWrap period={one.date} /> */}
             </Grid>
             <Line color="#eaecef" />
