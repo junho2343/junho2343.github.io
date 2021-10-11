@@ -1,5 +1,6 @@
 import { IconType } from "../components/UI/atom/Icon";
 import worldSkills from "../images/world-skills.png";
+import plto from "../images/plto.jpeg";
 
 export type ProfileType = {
   name: string;
@@ -68,14 +69,12 @@ const data: IProps = {
     },
     {
       name: "@전국 기능경기대회 은메달- 웹 디자인 및 개발",
-      href:
-        "https://meister.hrdkorea.or.kr/sub/3/3/1/20160512111525375100_view.do",
+      href: "https://meister.hrdkorea.or.kr/sub/3/3/1/20160512111525375100_view.do",
       period: "2018.10",
     },
     {
       name: "@서울 기능경기대회 은메달- 웹 디자인 및 개발",
-      href:
-        "https://meister.hrdkorea.or.kr/sub/3/2/1/20160512110924569100_view.do",
+      href: "https://meister.hrdkorea.or.kr/sub/3/2/1/20160512110924569100_view.do",
       period: "2018.04",
     },
   ],
@@ -257,20 +256,21 @@ const data: IProps = {
   ],
   posts: [
     {
-      title: "2018년도 기능경기대회 회고",
-      date: "2021.07.23",
-      content: "functional-competition",
-      thumbnail: worldSkills,
-    },
-    {
-      title: "테스트2",
-      date: "2022.01.01",
-      content: "test",
-    },
-    {
       title: "테스트1",
       date: "2034.01.01",
       content: "test",
+    },
+    {
+      title: "철부지 첫 회사 입사 - 플레이오토",
+      date: "2018.11",
+      content: "playauto-first-company",
+      thumbnail: plto,
+    },
+    {
+      title: "2018년도 기능경기대회 회고",
+      date: "2018.10",
+      content: "functional-competition",
+      thumbnail: worldSkills,
     },
   ],
   // wine: [
@@ -303,8 +303,8 @@ const data: IProps = {
 };
 
 // 게시물 최신순 정렬
-data.posts = data.posts.sort((a, b) => {
-  return +new Date(b.date) - +new Date(a.date);
-});
+// data.posts = data.posts.sort((a, b) => {
+//   return +new Date(b.date) - +new Date(a.date);
+// });
 
 export default data;

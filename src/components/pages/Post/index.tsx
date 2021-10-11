@@ -37,7 +37,6 @@ export default function Post() {
         <PeriodWrap period={postData?.date} />
       </Grid>
       <Line color="#eaecef" />
-      <Grid top={20} />
 
       <MarkDown>{contentData}</MarkDown>
     </>

@@ -36,7 +36,7 @@ export default function MarkDown({ children }: IProps) {
       remarkPlugins={[[gfm, { singleTilde: false }]]}
       components={{
         h1: ({ children }) => (
-          <Grid mt={20} mb={10}>
+          <Grid mt={50} mb={10}>
             <Text fontSize="1.8rem" fontWeight={400}>
               {children}
             </Text>
@@ -45,7 +45,7 @@ export default function MarkDown({ children }: IProps) {
           </Grid>
         ),
         h2: ({ children }) => (
-          <Grid mt={20} mb={10}>
+          <Grid mt={50} mb={10}>
             <Text fontSize="1.6rem" fontWeight={400}>
               {children}
             </Text>
@@ -54,7 +54,7 @@ export default function MarkDown({ children }: IProps) {
           </Grid>
         ),
         h3: ({ children }) => (
-          <Grid mt={20} mb={10}>
+          <Grid mt={50} mb={10}>
             <Text fontSize="1.4rem" fontWeight={400}>
               {children}
             </Text>
