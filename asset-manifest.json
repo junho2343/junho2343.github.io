@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.5774de09.chunk.js",
-    "main.js.map": "/static/js/main.5774de09.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2252a04d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2252a04d.js.map",
-    "static/js/2.9659c957.chunk.js": "/static/js/2.9659c957.chunk.js",
-    "static/js/2.9659c957.chunk.js.map": "/static/js/2.9659c957.chunk.js.map",
-    "static/js/3.69c087d1.chunk.js": "/static/js/3.69c087d1.chunk.js",
-    "static/js/3.69c087d1.chunk.js.map": "/static/js/3.69c087d1.chunk.js.map",
+    "main.js": "/static/js/main.a5deff66.chunk.js",
+    "main.js.map": "/static/js/main.a5deff66.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.787f2bca.js",
+    "runtime-main.js.map": "/static/js/runtime-main.787f2bca.js.map",
+    "static/js/2.09614aa3.chunk.js": "/static/js/2.09614aa3.chunk.js",
+    "static/js/2.09614aa3.chunk.js.map": "/static/js/2.09614aa3.chunk.js.map",
+    "static/js/3.9a9ac0a2.chunk.js": "/static/js/3.9a9ac0a2.chunk.js",
+    "static/js/3.9a9ac0a2.chunk.js.map": "/static/js/3.9a9ac0a2.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.9659c957.chunk.js.LICENSE.txt": "/static/js/2.9659c957.chunk.js.LICENSE.txt",
-    "static/media/functional-competition.md": "/static/media/functional-competition.834730c6.md",
+    "static/js/2.09614aa3.chunk.js.LICENSE.txt": "/static/js/2.09614aa3.chunk.js.LICENSE.txt",
+    "static/media/functional-competition.md": "/static/media/functional-competition.3eee91a4.md",
     "static/media/logo.dd76cb1f.png": "/static/media/logo.dd76cb1f.png",
+    "static/media/playauto-first-company.md": "/static/media/playauto-first-company.afe6d601.md",
     "static/media/test.md": "/static/media/test.c4478481.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.2252a04d.js",
-    "static/js/2.9659c957.chunk.js",
-    "static/js/main.5774de09.chunk.js"
+    "static/js/runtime-main.787f2bca.js",
+    "static/js/2.09614aa3.chunk.js",
+    "static/js/main.a5deff66.chunk.js"
   ]
 }
