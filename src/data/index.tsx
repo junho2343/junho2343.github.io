@@ -1,6 +1,6 @@
 import { IconType } from "../components/UI/atom/Icon";
-import worldSkills from "../images/world-skills.png";
-import plto from "../images/plto.jpeg";
+// import worldSkills from "../images/world-skills.png";
+// import plto from "../images/plto.jpeg";
 
 export type ProfileType = {
   name: string;
