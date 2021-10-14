@@ -255,23 +255,23 @@ const data: IProps = {
     },
   ],
   posts: [
-    {
-      title: "테스트1",
-      date: "2034.01.01",
-      content: "test",
-    },
-    {
-      title: "철부지 첫 회사 입사 - 플레이오토",
-      date: "2018.11",
-      content: "playauto-first-company",
-      thumbnail: plto,
-    },
-    {
-      title: "2018년도 기능경기대회 회고",
-      date: "2018.10",
-      content: "functional-competition",
-      thumbnail: worldSkills,
-    },
+//     {
+//       title: "테스트1",
+//       date: "2034.01.01",
+//       content: "test",
+//     },
+//     {
+//       title: "철부지 첫 회사 입사 - 플레이오토",
+//       date: "2018.11",
+//       content: "playauto-first-company",
+//       thumbnail: plto,
+//     },
+//     {
+//       title: "2018년도 기능경기대회 회고",
+//       date: "2018.10",
+//       content: "functional-competition",
+//       thumbnail: worldSkills,
+//     },
   ],
   // wine: [
   //   {
