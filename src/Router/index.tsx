@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import About from "../components/pages/About";
-import Posts from "../components/pages/Posts";
-import Post from "../components/pages/Post";
 
 import Footer from "../components/UI/organisms/Footer";
 
@@ -21,13 +19,13 @@ function Router() {
         >
           <Header />
           <Switch>
-            <Route path="/posts" exact>
+            {/* <Route path="/posts" exact>
               <Posts />
-            </Route>
+            </Route> */}
 
-            <Route path="/posts/:content">
+            {/* <Route path="/posts/:content">
               <Post />
-            </Route>
+            </Route> */}
 
             {/* 최초 페이지 */}
             <Route path="/">

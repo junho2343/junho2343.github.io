@@ -5,13 +5,17 @@ import Grid from "../../atom/Grid";
 import Text from "../../atom/Text";
 
 const MenuPc = styled(Grid)`
+  padding-top: 40px;
+
   @media ${({ theme }) => theme.device.mobile} {
     display: none;
   }
 `;
 
 const MenuMobile = styled.div<{ menuActive: boolean }>`
+  padding-top: 20px;
   display: none;
+
   @media ${({ theme }) => theme.device.mobile} {
     display: block;
   }
@@ -53,8 +57,12 @@ function MenuWrap() {
   return (
     <>
       <MenuPc display="flex" justifyContent="space-between" width={100}>
-        <Link to="/">About</Link>
-        <Link to="/posts">Post</Link>
+        <Link to="/">
+          <Text fontWeight={500}>About</Text>
+        </Link>
+        <Link to="/posts">
+          <Text fontWeight={500}>Post</Text>
+        </Link>
       </MenuPc>
       <MenuMobile menuActive={menuActive}>
         <div
@@ -82,7 +90,7 @@ function MenuWrap() {
                   setMenuActive(false);
                 }}
               >
-                About
+                <Text fontWeight={500}>About</Text>
               </Link>
             </Text>
           </Grid>
@@ -94,7 +102,7 @@ function MenuWrap() {
                   setMenuActive(false);
                 }}
               >
-                Post
+                <Text fontWeight={500}>Post</Text>
               </Link>
             </Text>
           </Grid>

@@ -1,7 +1,6 @@
-import { ProfileType } from "../../../../data";
-import Grid from "../../atom/Grid";
-import Text from "../../atom/Text";
-import TitleWrap from "../../molecules/TitleWrap";
+import Grid from "components/UI/atom/Grid";
+import TitleWrap from "components/UI/molecules/TitleWrap";
+import { ProfileType } from "data";
 
 interface IProps {
   data: ProfileType;
@@ -10,13 +9,10 @@ interface IProps {
 function Profile({ data }: IProps) {
   return (
     <>
-      <TitleWrap title="PROFILE" />
+      <TitleWrap title="문준호" />
       {data.map((one, index) => (
-        <Grid top={10} key={index}>
-          <Grid display="inline-block" width={100}>
-            <Text fontWeight={600}>{one.name}</Text>
-          </Grid>
-          <Grid display="inline-block">{one.value}</Grid>
+        <Grid top={5} key={index}>
+          {one}
         </Grid>
       ))}
     </>

@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 const Theme: DefaultTheme = {
-  mainColor: "#34a853",
+  mainColor: "#0366d6",
 
   device: {
     maxWidth: "1100px",

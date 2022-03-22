@@ -43,7 +43,7 @@ interface IProps {
   // 선
   border?: string;
 }
-const Box = styled.div<IProps>`
+const Grid = styled.div<IProps>`
   // 디스플레이 유형
   ${({ display }) => (display ? `display: ${display};` : "")}
 
@@ -98,10 +98,12 @@ const Box = styled.div<IProps>`
 
   // 선
   ${({ border }) => (border ? `border: ${border};` : "")}
+
+  word-break: break-all;
 `;
 
 // function Grid(props: IProps) {
 //   return <GridTag {...props} />;
 // }
 
-export default Box;
+export default Grid;

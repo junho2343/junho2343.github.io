@@ -1,34 +1,48 @@
-import Grid from "../../atom/Grid";
-import Text from "../../atom/Text";
-import Icon from "../../atom/Icon";
-import { ProjectOneType } from "../../../../data";
-import styled from "styled-components";
-import Accordion from "../Accordion";
+import { ProjectType } from "data";
+import Grid from "components/UI/atom/Grid";
+import Text from "components/UI/atom/Text";
+import Icon from "components/UI/atom/Icon";
+import Accordion from "components/UI/molecules/Accordion";
 
 interface IProps {
-  data: ProjectOneType;
+  data: ProjectType;
 }
-
-const WrapGrid = styled(Grid)`
-  cursor: pointer;
-
-  /* :hover {
-    
-  } */
-`;
 
 function ProjectWrap({ data }: IProps) {
   return (
-    <WrapGrid top={30} bottom={20}>
-      <Grid bottom={10}>
-        <Text fontSize="1.4rem" fontWeight={200} inline>
-          {data.name}
-        </Text>
-
-        <Grid display="inline-block" left={10} />
-        <Grid display="inline-block" color="#f9e7e6" left={4} right={4}>
-          <Text fontSize="0.9rem">{data.period}</Text>
-        </Grid>
+    <Grid bottom={50}>
+      <Grid
+        bottom={10}
+        style={{ cursor: data.href ? "pointer" : "unset" }}
+        onClick={() => {
+          data.href && window.open(data.href, "_blank");
+        }}
+      >
+        {data.href ? (
+          <a href={data.href} target="_blank" rel="noreferrer">
+            <Text fontSize="1.4rem" inline color="main">
+              <Text fontSize="inherit" fontWeight={400} inline>
+                {data.name}
+              </Text>{" "}
+              |{" "}
+              <Text fontSize="inherit" fontWeight={400} inline>
+                {data.company}
+              </Text>{" "}
+              | {data.period}
+            </Text>
+          </a>
+        ) : (
+          <Text fontSize="1.4rem" inline>
+            <Text fontSize="inherit" fontWeight={400} inline>
+              {data.name}
+            </Text>{" "}
+            |{" "}
+            <Text fontSize="inherit" fontWeight={400} inline>
+              {data.company}
+            </Text>{" "}
+            | {data.period}
+          </Text>
+        )}
       </Grid>
 
       <Text dangerouslySetInnerHTML={{ __html: data.content }} />
@@ -45,9 +59,9 @@ function ProjectWrap({ data }: IProps) {
             // open={index === 0 ? true : false}
             height={30}
             title={
-              <Text fontSize="1.4rem" fontWeight={200}>
-                자세히
-              </Text>
+              <Grid style={{ cursor: "pointer" }}>
+                <Text fontSize="1.2rem">자세히</Text>
+              </Grid>
             }
             content={
               <Grid top={20} bottom={10}>
@@ -63,7 +77,7 @@ function ProjectWrap({ data }: IProps) {
           />
         </>
       )}
-    </WrapGrid>
+    </Grid>
   );
 }
 

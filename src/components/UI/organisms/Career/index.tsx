@@ -1,8 +1,6 @@
 import { CareerType } from "../../../../data";
-import Grid from "../../atom/Grid";
 import Text from "../../atom/Text";
 import TitleWrap from "../../molecules/TitleWrap";
-import PeriodWrap from "../../molecules/PeriodWrap";
 
 interface IProps {
   data: CareerType;
@@ -11,17 +9,23 @@ interface IProps {
 function Career({ data }: IProps) {
   return (
     <>
-      <TitleWrap title="CAREER" />
-      {data.map((one, index) => (
-        <Grid top={10} key={index}>
-          <a href={one.href} target="_blank" rel="noreferrer">
-            <Text fontWeight={400} underline inline>
-              {one.name}
-            </Text>
-          </a>
-          <PeriodWrap period={one.period} />
-        </Grid>
-      ))}
+      <TitleWrap title="경력" />
+      <ul>
+        {data.map((one, index) => (
+          <li key={index}>
+            <a href={one.href} target="_blank" rel="noreferrer">
+              <Text inline fontWeight={400}>
+                {one.name}
+              </Text>
+              <Text inline> | {one.period}</Text>
+            </a>
+            <ul>
+              {one.summary &&
+                one.summary.map((one, index) => <li key={index}>{one}</li>)}
+            </ul>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

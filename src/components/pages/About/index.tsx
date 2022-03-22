@@ -10,18 +10,13 @@ function About() {
   return (
     <>
       <Grid>
-        {/* <TitleWrap title="JUNHO MOON" subject="Developer" /> */}
-        {/* <TitleWrap title="JUNHO2343" subject="Software Engineer" /> */}
-        {/* <TitleWrap title="SOFTWARE ENGINEER" /> */}
-        {/* <TitleWrap title="JUNHO2343" /> */}
-
         <Grid top={40} />
         <Profile data={data.profile} />
 
-        <Grid top={80} />
+        <Grid top={60} />
         <Career data={data.career} />
 
-        <Grid top={80} />
+        <Grid top={60} />
         <Project data={data.project} />
       </Grid>
       {/* <Title text="PROFILE" adornment="Developer" size="big" />
