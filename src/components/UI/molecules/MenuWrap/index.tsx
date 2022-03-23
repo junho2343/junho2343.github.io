@@ -33,7 +33,7 @@ const MenuMobile = styled.div<{ menuActive: boolean }>`
     position: fixed;
     z-index: 9;
     top: 0;
-    right: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.5);
     transition: 0.5s;
     cursor: pointer;
@@ -45,7 +45,7 @@ const MenuMobile = styled.div<{ menuActive: boolean }>`
     position: fixed;
     z-index: 10;
     top: 0;
-    right: ${({ menuActive }) => (menuActive ? "0" : "-100%")};
+    left: ${({ menuActive }) => (menuActive ? "0" : "-100%")};
     background: white;
     transition: 0.5s;
   }
