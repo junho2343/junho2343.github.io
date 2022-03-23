@@ -94,7 +94,7 @@ const Grid = styled.div<IProps>`
   background-color: ${({ color, theme }) =>
     color === "main" ? theme.mainColor : color ? color : "none"};
 
-  ${({ relative }) => (relative ? `position: relative` : "")}
+  ${({ relative }) => (relative ? `position: relative;` : "")}
 
   // 선
   ${({ border }) => (border ? `border: ${border};` : "")}

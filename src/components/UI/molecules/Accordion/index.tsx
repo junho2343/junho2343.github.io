@@ -22,7 +22,7 @@ const AccordionWrap = styled(Grid)`
 
 const ArrowWrap = styled(Grid)`
   position: absolute;
-  right: 5px;
+  right: 0;
 `;
 
 function Accordion({ open, height, title, content }: IProps) {
@@ -32,7 +32,8 @@ function Accordion({ open, height, title, content }: IProps) {
     <>
       <AccordionWrap height={expanded ? "" : height}>
         <AccordionTitle
-          display="flex"
+          right={25}
+          display="inline-flex"
           alignItems="center"
           height={height}
           relative
