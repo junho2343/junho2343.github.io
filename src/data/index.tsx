@@ -52,8 +52,8 @@ const data: IProps = {
       href: "https://plto.com/",
       period: "2018.10 ~ 현재",
       summary: [
-        "솔루션 내 프론트 레거시 영역 리펙토링",
-        "상품 이전 웹 서비스 공통화 모델 개발 - 11번가, 위메프",
+        "솔루션 내 레거시 영역 리펙토링",
+        "상품 이전 웹 서비스 공통화 모델 개발 - 위메프 / 11번가 / 쿠팡 제공",
         "쿠팡 상품 이전 웹 서비스 개발",
         "쇼핑몰 통합관리 솔루션 EMP 유지보수",
       ],
@@ -73,15 +73,17 @@ const data: IProps = {
     {
       name: "상품 이전 웹 서비스 공통화 버전 개발",
       company: companyData.playauto,
-      period: "2021.04 ~ 현재",
+      period: "2021.04 ~ 2021.07",
       people: 2,
-      content: `쿠팡에 제공 했던 상품 이전 웹 서비스 WakeUp 을 여러 쇼핑몰에 제공을 위해 공통화 버전 개발<br/>
-                    위메프 제공`,
+      content: `쿠팡에 제공 했던 상품 이전 웹 서비스 WakeUp 을 여러 쇼핑몰 제공을 위해 공통화 버전 개발<br/>
+                DB 리펙토링 및 구조적인 개선 함께 진행 - 위메프 / 11번가 / 쿠팡 제공
+                    `,
       detail: [
         "쇼핑몰과의 통신을 Queue 방식으로 처리하는 사내 PlayApi v1 활용",
         "대량 상품 이전으로 인한 트래픽 분산을 위해 병렬처리 및 최적화",
         "socket 을 통한 병렬처리 진행사항 실시간 화면 노출",
         "GitHub Action 을 통한 배포 자동화 (Docker, AWS ECR, ECS) + 슬랙 배포 알림 추가",
+        "작업 조회 및 상세 연동 내역 조회가 가능한 통합 어드민 개발",
       ],
       skill: [
         "React",
@@ -106,10 +108,11 @@ const data: IProps = {
       company: companyData.playauto,
       period: "2020.07 ~ 2021.03",
       people: 1,
-      href: "12",
+      href: "https://junho2343.notion.site/2021-f811bcf0b8b8405fa45c27563f43ff34",
       content: `최소한의 정보로 타 마켓에서 판매중인 상품을 쿠팡 Wing 으로 이전할 수 있는 상품이전 웹 서비스를 개발하여 쿠팡에 제공<br/>
                   전체적인 구조 / 개발 및 쿠팡측과의 소통을 혼자 도맡아 진행<br/><br/>
-                  이전한 상품 수 : 47,049,895 - 2021.06.07 기준
+                  2022.03.23 기준<br/>
+                  누적 이전 상품 수 : 71,133,478 / 누적 신규 회원 수 67,006
                   `,
       detail: [
         "쇼핑몰과의 통신을 Queue 방식으로 처리하는 사내 PlayApi v1 활용",
@@ -163,7 +166,7 @@ const data: IProps = {
       company: companyData.playauto,
       period: "2020.06 ~ 2020.07",
       people: 1,
-      content: `플레이오토 EMP 솔루션 내 연동 쇼핑몰 개발<br/>
+      content: `플레이오토 EMP 솔루션 내 엔진 쇼핑몰 연동 개발<br/>
                     스크랩핑을 통해 펀앤쇼핑 어드민 기능을 HTTP 통신으로 구현
                         `,
       detail: [
@@ -213,7 +216,7 @@ const data: IProps = {
       company: companyData.playauto,
       period: "2019.04 ~ 2019.05",
       people: 1,
-      content: `플레이오토 EMP 솔루션 내 연동 쇼핑몰 개발<br/>
+      content: `플레이오토 EMP 솔루션 내 엔진 쇼핑몰 연동 개발<br/>
                     스크랩핑을 통해 메이크글로벌 어드민 기능을 HTTP 통신으로 구현
                         `,
       detail: [
@@ -231,7 +234,7 @@ const data: IProps = {
       content: `
                     [스크랩핑 / API] 연동으로 이루어진 쇼핑몰과의 HTTP 통신 부분을 개발 및 유지보수<br/>
                     HTTP 통신 및 다양한 쇼핑몰별 구조, e-commerce 시장에 대한 이해도 증가<br/>
-                    10년을 넘게 서비스해온 솔루션 유지보수를 맡으먼서 유지보수의 중요성 및 기존 소스 분석력 증가
+                    10년을 넘게 서비스해온 솔루션 유지보수를 맡으면서 유지보수의 중요성 및 기존 소스 분석력 증가
                         `,
 
       skill: ["C Sharp", "PHP", "JavaScript", "jQuery"],

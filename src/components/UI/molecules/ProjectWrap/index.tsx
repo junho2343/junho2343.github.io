@@ -11,13 +11,7 @@ interface IProps {
 function ProjectWrap({ data }: IProps) {
   return (
     <Grid bottom={50}>
-      <Grid
-        bottom={10}
-        style={{ cursor: data.href ? "pointer" : "unset" }}
-        onClick={() => {
-          data.href && window.open(data.href, "_blank");
-        }}
-      >
+      <Grid bottom={10}>
         {data.href ? (
           <a href={data.href} target="_blank" rel="noreferrer">
             <Text fontSize="1.4rem" inline color="main">

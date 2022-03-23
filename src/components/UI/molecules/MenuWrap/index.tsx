@@ -60,9 +60,13 @@ function MenuWrap() {
         <Link to="/">
           <Text fontWeight={500}>About</Text>
         </Link>
-        <Link to="/posts">
+        <a
+          href="https://junho2343.notion.site/d934acb6134b4087bf8161ad3bede658?v=4631127aaf3b456f8be5c503705c24ab"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Text fontWeight={500}>Post</Text>
-        </Link>
+        </a>
       </MenuPc>
       <MenuMobile menuActive={menuActive}>
         <div
@@ -96,14 +100,16 @@ function MenuWrap() {
           </Grid>
           <Grid bottom={10}>
             <Text>
-              <Link
-                to="/posts"
+              <a
+                href="https://junho2343.notion.site/d934acb6134b4087bf8161ad3bede658?v=4631127aaf3b456f8be5c503705c24ab"
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => {
                   setMenuActive(false);
                 }}
               >
                 <Text fontWeight={500}>Post</Text>
-              </Link>
+              </a>
             </Text>
           </Grid>
         </Grid>
