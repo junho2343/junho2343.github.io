@@ -12,7 +12,7 @@ export type CareerType = {
   name: string;
   href: string;
   period: string;
-  summary?: string[];
+  summary?: (string | { text: string; href: string })[];
 }[];
 
 export type ProjectType = {
@@ -54,7 +54,10 @@ const data: IProps = {
       summary: [
         "솔루션 내 레거시 영역 리펙토링",
         "상품 이전 웹 서비스 공통화 모델 개발 - 위메프 / 11번가 / 쿠팡 제공",
-        "쿠팡 상품 이전 웹 서비스 개발",
+        {
+          text: "쿠팡 상품 이전 웹 서비스 개발",
+          href: "https://junho2343.notion.site/2021-f811bcf0b8b8405fa45c27563f43ff34",
+        },
         "쇼핑몰 통합관리 솔루션 EMP 유지보수",
       ],
     },

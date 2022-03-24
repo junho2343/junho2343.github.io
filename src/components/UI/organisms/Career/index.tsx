@@ -21,7 +21,17 @@ function Career({ data }: IProps) {
             </a>
             <ul>
               {one.summary &&
-                one.summary.map((one, index) => <li key={index}>{one}</li>)}
+                one.summary.map((one, index) => (
+                  <li key={index}>
+                    {typeof one === "string" ? (
+                      one
+                    ) : (
+                      <a href={one.href} target="_blank" rel="noreferrer">
+                        <Text fontWeight={400}>{one.text}</Text>
+                      </a>
+                    )}
+                  </li>
+                ))}
             </ul>
           </li>
         ))}
