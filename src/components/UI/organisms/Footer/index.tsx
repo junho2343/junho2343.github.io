@@ -18,7 +18,7 @@ function Footer() {
           width={1024}
           height="100%"
         >
-          <Text color="#8898a9">© Moon Junho. 2021</Text>
+          <Text color="#8898a9">© Moon Junho. {new Date().getFullYear()}</Text>
         </Grid>
       </Grid>
     </>
