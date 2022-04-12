@@ -63,12 +63,17 @@ const data: IProps = {
   ],
   awards_certificate: [
     {
-      name: "전국 기능경기대회 은메달- 웹 디자인 및 개발",
+      name: "AWS 공인 솔루션스 아키텍트 – 어소시에이트",
+      href: "https://www.credly.com/badges/647c637d-ccd4-4b56-bc45-058606547fa4/public_url",
+      period: "2022.04",
+    },
+    {
+      name: "전국기능경기대회 웹디자인 및 개발 부문 은메달",
       href: "https://meister.hrdkorea.or.kr/sub/3/3/1/20160512111525375100_view.do",
       period: "2018.10",
     },
     {
-      name: "서울 기능경기대회 은메달- 웹 디자인 및 개발",
+      name: "지방기능경기대회 웹디자인 및 개발 부문 은메달",
       href: "https://meister.hrdkorea.or.kr/sub/3/2/1/20160512110924569100_view.do",
       period: "2018.04",
     },

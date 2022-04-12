@@ -15,7 +15,7 @@ function About() {
         <Grid top={60} />
         <Career data={data.career} />
 
-        <Grid top={30} />
+        <Grid top={60} />
         <AwardsCertificate data={data.awards_certificate} />
 
         <Grid top={60} />
