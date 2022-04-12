@@ -1,6 +1,6 @@
-import Grid from "../../atom/Grid";
-import Line from "../../atom/Line";
-import MenuWrap from "../../molecules/MenuWrap";
+import Grid from "components/UI/atom/Grid";
+import Line from "components/UI/atom/Line";
+import MenuWrap from "components/UI/molecules/MenuWrap";
 
 function Header() {
   return (

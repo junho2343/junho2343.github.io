@@ -1,6 +1,4 @@
-import { IconType } from "../components/UI/atom/Icon";
-// import worldSkills from "../images/world-skills.png";
-// import plto from "../images/plto.jpeg";
+import { IconType } from "components/UI/atom/Icon";
 
 const companyData = {
   playauto: "플레이오토(PLAYAUTO)",
@@ -8,7 +6,7 @@ const companyData = {
 
 export type ProfileType = string[];
 
-export type CareerType = {
+export type ListType = {
   name: string;
   href: string;
   period: string;
@@ -36,7 +34,8 @@ export type PostType = {
 
 interface IProps {
   profile: ProfileType;
-  career: CareerType;
+  career: ListType;
+  awards_certificate: ListType;
   project: ProjectType[];
   posts: PostType[];
 }
@@ -61,6 +60,8 @@ const data: IProps = {
         "쇼핑몰 통합관리 솔루션 EMP 유지보수",
       ],
     },
+  ],
+  awards_certificate: [
     {
       name: "전국 기능경기대회 은메달- 웹 디자인 및 개발",
       href: "https://meister.hrdkorea.or.kr/sub/3/3/1/20160512111525375100_view.do",

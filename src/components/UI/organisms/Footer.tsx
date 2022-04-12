@@ -1,6 +1,6 @@
-import Grid from "../../atom/Grid";
-import Line from "../../atom/Line";
-import Text from "../../atom/Text";
+import Grid from "components/UI/atom/Grid";
+import Line from "components/UI/atom/Line";
+import Text from "components/UI/atom/Text";
 
 function Footer() {
   return (

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Grid from "../../atom/Grid";
-import Text from "../../atom/Text";
+
+import Grid from "components/UI/atom/Grid";
+import Text from "components/UI/atom/Text";
 
 const MenuPc = styled(Grid)`
   padding-top: 40px;

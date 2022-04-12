@@ -1,10 +1,9 @@
-import Grid from "../../UI/atom/Grid";
-
-import Profile from "../../UI/organisms/Profile";
-import Career from "../../UI/organisms/Career";
-import Project from "../../UI/organisms/Project";
-
-import data from "../../../data";
+import Grid from "components/UI/atom/Grid";
+import AwardsCertificate from "components/UI/organisms/AwardsCertificate";
+import Career from "components/UI/organisms/Career";
+import Profile from "components/UI/organisms/Profile";
+import Project from "components/UI/organisms/Project";
+import data from "data";
 
 function About() {
   return (
@@ -15,6 +14,9 @@ function About() {
 
         <Grid top={60} />
         <Career data={data.career} />
+
+        <Grid top={30} />
+        <AwardsCertificate data={data.awards_certificate} />
 
         <Grid top={60} />
         <Project data={data.project} />

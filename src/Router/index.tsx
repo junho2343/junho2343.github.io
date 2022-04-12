@@ -1,11 +1,8 @@
+import About from "components/pages/About";
+import Grid from "components/UI/atom/Grid";
+import Footer from "components/UI/organisms/Footer";
+import Header from "components/UI/organisms/Header";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import About from "../components/pages/About";
-
-import Footer from "../components/UI/organisms/Footer";
-
-import Grid from "../components/UI/atom/Grid";
-import Header from "../components/UI/organisms/Header";
 
 function Router() {
   return (

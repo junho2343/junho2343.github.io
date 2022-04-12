@@ -1,4 +1,4 @@
-import Grid from "../Grid";
+import Grid from "components/UI/atom/Grid";
 
 const iconMapData = {
   React: {

@@ -1,7 +1,8 @@
 import { MouseEventHandler, ReactNode, useState } from "react";
 import styled from "styled-components";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
-import Grid from "../../atom/Grid";
+
+import Grid from "components/UI/atom/Grid";
 
 interface IProps {
   open?: boolean;
