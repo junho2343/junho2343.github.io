@@ -61,13 +61,13 @@ function MenuWrap() {
         <Link to="/">
           <Text fontWeight={500}>About</Text>
         </Link>
-        <a
+        {/* <a
           href="https://junho2343.notion.site/d934acb6134b4087bf8161ad3bede658?v=4631127aaf3b456f8be5c503705c24ab"
           target="_blank"
           rel="noreferrer"
         >
           <Text fontWeight={500}>Post</Text>
-        </a>
+        </a> */}
       </MenuPc>
       <MenuMobile menuActive={menuActive}>
         <div
@@ -99,7 +99,7 @@ function MenuWrap() {
               </Link>
             </Text>
           </Grid>
-          <Grid bottom={10}>
+          {/* <Grid bottom={10}>
             <Text>
               <a
                 href="https://junho2343.notion.site/d934acb6134b4087bf8161ad3bede658?v=4631127aaf3b456f8be5c503705c24ab"
@@ -112,7 +112,7 @@ function MenuWrap() {
                 <Text fontWeight={500}>Post</Text>
               </a>
             </Text>
-          </Grid>
+          </Grid> */}
         </Grid>
       </MenuMobile>
     </>

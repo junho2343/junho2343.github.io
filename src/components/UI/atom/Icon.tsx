@@ -116,6 +116,31 @@ const iconMapData = {
     color: "white",
     origin: null,
   },
+  TypeORM: {
+    background: "3e3e3e",
+    color: "white",
+    origin: null,
+  },
+  Storybook: {
+    background: "FF4785",
+    color: "white",
+    origin: null,
+  },
+  Redux: {
+    background: "764ABC",
+    color: "white",
+    origin: null,
+  },
+  "AWS Lambda": {
+    background: "FF9900",
+    color: "black",
+    origin: null,
+  },
+  Serverless: {
+    background: "FD5750",
+    color: "white",
+    origin: null,
+  },
 };
 
 export type IconType = keyof typeof iconMapData;

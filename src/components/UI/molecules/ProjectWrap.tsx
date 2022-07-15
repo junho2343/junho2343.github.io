@@ -58,7 +58,7 @@ function ProjectWrap({ data }: IProps) {
               </Grid>
             }
             content={
-              <Grid top={20} bottom={10}>
+              <Grid top={15} bottom={10}>
                 {data.detail.map((one, index) => (
                   <li key={index}>
                     <Text fontSize="0.9rem" inline>

@@ -1,10 +1,11 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import About from "components/pages/About";
 import Grid from "components/UI/atom/Grid";
 import Footer from "components/UI/organisms/Footer";
 import Header from "components/UI/organisms/Header";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function Router() {
+export default function Router() {
   return (
     <BrowserRouter>
       <Grid display="flex" direction="column" alignItems="center">
@@ -35,5 +36,3 @@ function Router() {
     </BrowserRouter>
   );
 }
-
-export default Router;
