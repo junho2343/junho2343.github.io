@@ -141,6 +141,16 @@ const iconMapData = {
     color: "white",
     origin: null,
   },
+  GraphQL: {
+    background: "E10098",
+    color: "white",
+    origin: null,
+  },
+  "Apollo GraphQL": {
+    background: "311C87",
+    color: "white",
+    origin: null,
+  },
 };
 
 export type IconType = keyof typeof iconMapData;

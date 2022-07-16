@@ -88,9 +88,42 @@ const data: IProps = {
   ],
   project: [
     {
+      name: "솔루션 내 C# 영역 => 웹 기반 리펙토링",
+      company: companyData.playauto,
+      period: "2022.05 ~ 2022.07",
+      people: 3,
+      content: `
+      c# 기반 화면을 구성하는 영역이 심각히 느려졌고, 불필요한 서버측 자원을 많이 사용하여 전체적인 리펙토링 결정<br/>
+      설치 프로그램의 단점을 보완하기 위해 상시 배포가 가능한 웹으로 클라이언트 영역 리펙토링<br/>
+      소스관리, 자동완성, 타입추론, 배포 자동화, 쿼리 개선 등 서버영역 또한 리펙토링<br/>
+      솔루션 특성상 비슷하지만 조금씩 다른 API 기능들이 많이 필요하여 언더패치, 오버패치 해결을 위한 GraphQL 도입<br/>
+      (c# -> React / PHP -> NestJS)
+                    `,
+      detail: [
+        "기존의 인증/인가를 그대로 상요할 수 있도록 개선",
+        "c# 영역들을 웹 영역으로 점진적 변경을 할 예정으로 그에 따른 소스 구조 개발",
+        "GitHub 사용, 배포 자동화 - 로컬 환경을 안거치고 서버에 직접 ftp를 통해 저장하는 php 개발 스타일이였....",
+        "TypeScript 통한 필요 코드 강제화, 자동완성, 타입추론",
+      ],
+      skill: [
+        "React",
+        "TypeScript",
+        "NestJS",
+        "Node.js",
+        "Amazon AWS",
+        "Docker",
+        "GitHub Actions",
+        "Mysql",
+        "JSON Web Tokens",
+        "GraphQL",
+        "Apollo GraphQL",
+      ],
+    },
+
+    {
       name: "쿠팡 전용 네이버쇼핑 랭킹 스크랩핑 및 정보 전달 구조 개발",
       company: companyData.playauto,
-      period: "2021.04 ~ 2022.06",
+      period: "2022.04 ~ 2022.06",
       people: 2,
       content: `
       \`상품 이전 웹 서비스\`의 고도화로 많은 양의 상품을 이전 했지만 양질의 상품을 구분할 수 없음<br/>
