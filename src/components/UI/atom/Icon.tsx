@@ -151,6 +151,27 @@ const iconMapData = {
     color: "white",
     origin: null,
   },
+  "Amazon S3": {
+    background: "569A31",
+    color: "white",
+    origin: null,
+  },
+  "Amazon ECS": {
+    background: "FF9900",
+    color: "black",
+    origin: null,
+  },
+  "Amazon CloudWatch": {
+    background: "FF4F8B",
+    color: "white",
+    origin: null,
+  },
+  "Amazon API Gateway": { background: "FF4F8B", color: "white", origin: null },
+  "Amazon RDS": {
+    background: "527FFF",
+    color: "white",
+    origin: null,
+  },
 };
 
 export type IconType = keyof typeof iconMapData;

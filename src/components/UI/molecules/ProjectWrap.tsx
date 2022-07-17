@@ -3,6 +3,7 @@ import Grid from "components/UI/atom/Grid";
 import Text from "components/UI/atom/Text";
 import Icon from "components/UI/atom/Icon";
 import Accordion from "components/UI/molecules/Accordion";
+import React from "react";
 
 interface IProps {
   data: ProjectType;
@@ -59,12 +60,25 @@ function ProjectWrap({ data }: IProps) {
             }
             content={
               <Grid top={15} bottom={10}>
-                {data.detail.map((one, index) => (
-                  <li key={index}>
-                    <Text fontSize="0.9rem" inline>
-                      {one}
-                    </Text>
-                  </li>
+                <Text>담당 역할 :</Text>
+                {data.detail.myParts.map((myPart, index) =>
+                  typeof myPart === "string" ? (
+                    <li key={index}>{myPart}</li>
+                  ) : (
+                    <React.Fragment key={index}>
+                      <li>{myPart.title}</li>
+                      {myPart.content.map((one, index) => (
+                        <li style={{ paddingLeft: 40 }} key={index}>
+                          {one}
+                        </li>
+                      ))}
+                    </React.Fragment>
+                  )
+                )}
+                <Grid top={30} />
+                <Text>결과 및 성과</Text>
+                {data.detail.resultAndPerformance.map((one, index) => (
+                  <li key={index}>{one}</li>
                 ))}
               </Grid>
             }
