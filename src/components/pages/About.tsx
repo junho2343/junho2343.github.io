@@ -3,7 +3,7 @@ import AwardsCertificate from "components/UI/organisms/AwardsCertificate";
 import Career from "components/UI/organisms/Career";
 import Profile from "components/UI/organisms/Profile";
 import Project from "components/UI/organisms/Project";
-import SideProject from "components/UI/organisms/SideProject";
+// import SideProject from "components/UI/organisms/SideProject";
 import data from "data";
 
 function About() {
