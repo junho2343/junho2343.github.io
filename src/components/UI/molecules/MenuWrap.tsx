@@ -57,10 +57,13 @@ function MenuWrap() {
 
   return (
     <>
-      <MenuPc display="flex" justifyContent="space-between" width={100}>
+      <MenuPc display="flex" justifyContent="space-between" width={110}>
         <Link to="/">
           <Text fontWeight={500}>About</Text>
         </Link>
+        <a href="https://github.com/junho2343" target="_blank" rel="noreferrer">
+          <Text fontWeight={500}>Github</Text>
+        </a>
         {/* <a
           href="https://junho2343.notion.site/d934acb6134b4087bf8161ad3bede658?v=4631127aaf3b456f8be5c503705c24ab"
           target="_blank"
@@ -97,6 +100,21 @@ function MenuWrap() {
               >
                 <Text fontWeight={500}>About</Text>
               </Link>
+            </Text>
+          </Grid>
+
+          <Grid bottom={10}>
+            <Text>
+              <a
+                href="https://github.com/junho2343"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => {
+                  setMenuActive(false);
+                }}
+              >
+                <Text fontWeight={500}>Github</Text>
+              </a>
             </Text>
           </Grid>
           {/* <Grid bottom={10}>
