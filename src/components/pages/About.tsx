@@ -3,6 +3,7 @@ import AwardsCertificate from "components/UI/organisms/AwardsCertificate";
 import Career from "components/UI/organisms/Career";
 import Profile from "components/UI/organisms/Profile";
 import Project from "components/UI/organisms/Project";
+import SideProject from "components/UI/organisms/SideProject";
 import data from "data";
 
 function About() {
@@ -20,6 +21,9 @@ function About() {
 
         <Grid top={60} />
         <Project data={data.project} />
+
+        {/* <Grid top={60} />
+        <SideProject data={data.sideProject} /> */}
 
         <a href="https://hits.seeyoufarm.com">
           <img

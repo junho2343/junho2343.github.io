@@ -19,10 +19,14 @@ function ProjectWrap({ data }: IProps) {
               <Text fontSize="inherit" fontWeight={400} inline>
                 {data.name}
               </Text>{" "}
-              |{" "}
-              <Text fontSize="inherit" fontWeight={400} inline>
-                {data.company}
-              </Text>{" "}
+              {data.company && (
+                <>
+                  |{" "}
+                  <Text fontSize="inherit" fontWeight={400} inline>
+                    {data.company}
+                  </Text>{" "}
+                </>
+              )}
               | {data.period}
             </Text>
           </a>
@@ -31,10 +35,14 @@ function ProjectWrap({ data }: IProps) {
             <Text fontSize="inherit" fontWeight={400} inline>
               {data.name}
             </Text>{" "}
-            |{" "}
-            <Text fontSize="inherit" fontWeight={400} inline>
-              {data.company}
-            </Text>{" "}
+            {data.company && (
+              <>
+                |{" "}
+                <Text fontSize="inherit" fontWeight={400} inline>
+                  {data.company}
+                </Text>{" "}
+              </>
+            )}
             | {data.period}
           </Text>
         )}

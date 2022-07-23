@@ -16,7 +16,7 @@ export type ListType = {
 export type ProjectType = {
   best?: boolean;
   name: string;
-  company: string;
+  company?: string;
   period: string;
   people: number | number[];
   href?: string;
@@ -48,6 +48,7 @@ interface IProps {
   career: ListType;
   awards_certificate: ListType;
   project: ProjectType[];
+  sideProject: ProjectType[];
   posts: PostType[];
 }
 
@@ -580,6 +581,53 @@ const data: IProps = {
         ],
       },
       skill: ["C Sharp", "PHP", "JavaScript", "jQuery", "Mysql"],
+    },
+  ],
+  sideProject: [
+    {
+      name: "우리끼리",
+      // company: ,
+      period: "2022.04 ~ 2022.07",
+      people: [2],
+      href: "https://www.instagram.com/woori_app_official",
+      content: `
+      가족, 친구, 커플들의 일정 공유 어플(IOS, Android 지원)<br/>
+      부모님의 어려운 음력생일도 매년 자동 등록
+                        `,
+      detail: {
+        myParts: [
+          {
+            title: "Client",
+            content: ["React Native 를 통한 앱 기능 구현"],
+          },
+          {
+            title: "Server",
+            content: [
+              "인증/인가 구현",
+              "http 통신용 공통 함수 개발 - 로그인 스크랩핑 및 응답 받은 쿠키 재사용 로직, 공통된 에러처리",
+              "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
+            ],
+          },
+          // "쇼핑몰들간 공통적으로 사용할 수 있는 기능들 공통화/분리 - ex) 카테고리, 미성년자 구매, 즉시할인, 출고지, 반품지 등등등...",
+          "TypeScript 통한 필요 코드 강제화, 자동완성, 타입추론",
+          "GitHub 사용 - 로컬 환경을 안거치고 ftp를 통해 서버에 직접 저장하는 php 개발 스타일이였...",
+          "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
+        ],
+        resultAndPerformance: [
+          "사용자 - UI 개편 및 공통화로 인한 눈이 즐거움 (사용자보단 개발자를 위한 리펙토링이라..)",
+          "개발자 - 세트 영역 개발 시간 대폭 감소 - 평균 1~2일 => 약 4시간",
+          // "개발자 - 더 이상 소스파편화로 스트레스를 받지 않음 ",
+        ],
+      },
+      skill: [
+        "React Native",
+        "Node.js",
+        "TypeORM",
+        "Amazon ECS",
+        "Amazon S3",
+        "Amazon RDS",
+        "GitHub Actions",
+      ],
     },
   ],
   posts: [

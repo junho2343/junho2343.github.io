@@ -6,6 +6,11 @@ const iconMapData = {
     color: "black",
     origin: null,
   },
+  "React Native": {
+    background: "61DAFB",
+    color: "black",
+    origin: null,
+  },
   "Next.js": {
     background: "000000",
     color: "white",
