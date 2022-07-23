@@ -70,7 +70,7 @@ const data: IProps = {
         },
         "솔루션 내 상품상세 영역 서비스 분리 및 리펙토링 (c# -> React,  PHP -> NestJS)",
         "솔루션 내 레거시 웹 영역 리펙토링 (JavaScript/JQuery -> React, PHP -> NestJS)",
-        "쇼핑몰 통합관리 솔루션 EMP / 홈페이지 / 사내 어드민 유지보수",
+        "쇼핑몰 통합관리 솔루션 EMP / 사내 어드민 유지보수",
       ],
     },
   ],
@@ -132,16 +132,17 @@ const data: IProps = {
       skill: [
         "React",
         "TypeScript",
-        "NestJS",
         "Amazon S3",
+        "styled-components",
+        "Apollo GraphQL",
+        "GraphQL",
+        "NestJS",
         "Amazon ECS",
         "Amazon CloudWatch",
+        "Amazon RDS",
         "Docker",
         "GitHub Actions",
         "Mysql",
-        "styled-components",
-        "GraphQL",
-        "Apollo GraphQL",
       ],
     },
 
@@ -172,9 +173,11 @@ const data: IProps = {
             content: [
               "위 AWS Lambda 를 통한 스크랩핑 결과 저장용 API 개발",
               "스크랩핑한 정보를 기반으로 데이터를 가공하여 쿠팡에 전달하는 소스 개발 - 매일 새벽 크론 실행",
+              "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
             ],
           },
           "쿠팡측과의 지속적인 미팅 및 메일을 통한 의사소통을 통해 전반적인 프로젝트 진행",
+          "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
           // "일반 사용자와 같아 보이도록 header 값을 조정한 후 페이지 호출간 대기시간을 널널이 주어 오랜 시간에 걸쳐 데이터를 수집 할 수 있도록 개발",
         ],
         resultAndPerformance: [
@@ -209,9 +212,32 @@ const data: IProps = {
       period: "2022.02",
       people: 2,
       content: `
-       사내 솔루션 별로 지원 쇼핑몰 어드민이 상이하여 한번에 관리할 수 있는 통합 어드민 개발<br/>
+       사내 솔루션 별로 지원 쇼핑몰관리 어드민이 각각 존재하여 한번에 관리할 수 있는 통합 어드민 개발<br/>
        솔루션 별로 각각 상이한 database 스키마 통합
                     `,
+
+      detail: {
+        myParts: [
+          {
+            title: "Client",
+            content: ["페이징 처리 및 API 연결"],
+          },
+          {
+            title: "Server",
+            content: [
+              "솔루션별 database 스키마 통합",
+              "엑셀 통한 등록/수정 기능 개발",
+              "사내 API용 구조 개발 및 통합된 데이터 조회 API 개발",
+              "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
+            ],
+          },
+
+          "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
+        ],
+        resultAndPerformance: [
+          "지원 쇼핑몰 추가/수정 시 관리 영역 통합으로 인한 리소스 감소",
+        ],
+      },
       // detail: [
       //   "관리자 전용 어드민 페이지 개발 - 엑셀 일괄 업로드, 엑셀 일괄 수정, 엑셀 다운로드, 검색, 부분등록, 부분수정",
       //   "통합된 데이터를 각 솔루션에서 사용할 수 있도록 사내용 조회 API 제공",
@@ -219,9 +245,11 @@ const data: IProps = {
       skill: [
         "React",
         "TypeScript",
-        "NestJS",
         "styled-components",
+        "Amazon S3",
+        "NestJS",
         "Amazon ECS",
+        "Amazon RDS",
         "Amazon CloudWatch",
         "Docker",
         "GitHub Actions",
@@ -235,10 +263,41 @@ const data: IProps = {
       people: 2,
       content: `
       2022년 기준 7년 이상 전에 개발된 웹 영역 리펙토링.<br/>
+      쇼핑몰별 공통화할 수 없는 정보를 추가 입력하는 세트 영역 - 연동 쇼핑몰별 개발이 필요하여 소스 양이 어마어마함.<br/>
       과거에 비해 웹 개발 기술이 날아올라, 조금 더 편하게 세트 개발이 가능한 환경 제공을 위해 시작하게 되었습니다.<br/>
       (JavaScript, JQuery -> React / PHP -> NestJS)
 
                     `,
+      detail: {
+        myParts: [
+          {
+            title: "Client",
+            content: [
+              "UI 변경 및 컴포넌트 공통화 - 심각한 UI 소스 파편화 해결",
+              "최초 개발시 템플릿 생성 기능 - 기본적인 뼈대 제공",
+              "Redux 를 통한 상태관리 구조 개발",
+              "Storybook 을 통한 빠른 컴포넌트 파악 및 신중한 설계 - 약 100개가 넘는 쇼핑몰별 영역에서 사용하는 공통 컴포넌트",
+            ],
+          },
+          {
+            title: "Server",
+            content: [
+              "NestJS 를 통한 공통된 구조 개발 - 신규 쇼핑몰 연동 시 정해진 동일한 구조로 개발",
+              "http 통신용 공통 함수 개발 - 로그인 스크랩핑 및 응답 받은 쿠키 재사용 로직, 공통된 에러처리",
+              "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
+            ],
+          },
+          // "쇼핑몰들간 공통적으로 사용할 수 있는 기능들 공통화/분리 - ex) 카테고리, 미성년자 구매, 즉시할인, 출고지, 반품지 등등등...",
+          "TypeScript 통한 필요 코드 강제화, 자동완성, 타입추론",
+          "GitHub 사용 - 로컬 환경을 안거치고 ftp를 통해 서버에 직접 저장하는 php 개발 스타일이였...",
+          "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
+        ],
+        resultAndPerformance: [
+          "사용자 - UI 개편 및 공통화로 인한 눈이 즐거움 (사용자보단 개발자를 위한 리펙토링이라..)",
+          "개발자 - 세트 영역 개발 시간 대폭 감소 - 평균 1~2일 => 약 4시간",
+          // "개발자 - 더 이상 소스파편화로 스트레스를 받지 않음 ",
+        ],
+      },
       // detail: [
       //   "UI 변경 및 컴포넌트 공통화 - 심각한 UI 소스 파편화 해결",
       //   "GitHub 사용, 배포 자동화 - 로컬 환경을 안거치고 서버에 직접 ftp를 통해 저장하는 php 개발 스타일이였....",
@@ -253,14 +312,13 @@ const data: IProps = {
         "NestJS",
         "styled-components",
         "Storybook",
+        "Redux",
         "Amazon S3",
         "Amazon ECS",
         "Amazon CloudWatch",
         "Docker",
         "GitHub Actions",
         "Mysql",
-        "JSON Web Tokens",
-        "Redux",
       ],
     },
 
@@ -278,17 +336,47 @@ const data: IProps = {
       //   "NestJS, TypeORM 도입을 통한 백엔드 리펙토링 (완전 대대만족)",
       //   "공통화 작업으로 인해 제휴사 추가 인입시 개발 소요 시간 대폭 감소",
       // ],
+      detail: {
+        myParts: [
+          {
+            title: "Client",
+            content: ["Atomic Design 패턴으로 인한 컴포넌트 재사용성 극대화"],
+          },
+          {
+            title: "Server",
+            content: [
+              "ORM 서비스 TypeORM 도입",
+              "Node.js => NestJS 도입",
+              "Database - IDC => AWS RDS 마이그레이션",
+              "Amazon Aurora 를 통한 읽기, 쓰기 DB 및 쿼리 분리",
+              "Database 구조 개선 - 제휴사별 서비스 제공 가능하도록",
+              "핵심 기능들 공통화",
+            ],
+          },
+          "TypeScript 도입",
+          "전체적인 기능은 `쿠팡 상품 이전 웹 서비스` 와 동일",
+        ],
+        resultAndPerformance: [
+          "추가 제휴사 인입 시 공통 로직 구현 x - 개발 비용 감소",
+          "Database AWS 마이그레이션으로 사용량에 따른 유연한 사양 조절 가능",
+          "TypeScript, ORM 도입으로 인한 유지보수 비용 감소 - 제가 직접 느꼈어요.. 최고..",
+          "성과는 `쿠팡 상품 이전 웹 서비스` 와 동일",
+        ],
+      },
       skill: [
         "React",
         "Atomic Design",
         "TypeScript",
-        "NestJS",
-        "Socket.io",
         "styled-components",
         // "C Sharp",
         "Amazon S3",
+        "NestJS",
+        "Socket.io",
         "Amazon ECS",
+        "Amazon RDS",
         "Amazon CloudWatch",
+        "Amazon SQS",
+        "AWS Lambda",
         "Docker",
         "GitHub Actions",
         "Mysql",
@@ -307,71 +395,99 @@ const data: IProps = {
       content: `최소한의 정보로 타 마켓에서 판매중인 상품을 쿠팡 Wing 으로 이전할 수 있는 상품이전 웹 서비스를 개발하여 쿠팡에 제공<br/>
                   전체적인 구조 / 개발 및 쿠팡측과의 소통을 혼자 도맡아 진행<br/><br/>
                   2022.03.23 기준<br/>
-                  누적 이전 상품 수 : 71,133,478 / 누적 신규 회원 수 67,006
+                  누적 이전 상품 수 : 71,133,478 / 누적 신규 사용자 수 67,006
                   `,
-      // detail: [
-      //   "쇼핑몰과의 통신을 Queue 방식으로 처리하는 사내 PlayApi v1 활용",
-      //   "대량 상품 이전으로 인한 트래픽 분산을 위해 병렬처리",
-      //   "socket 을 통한 병렬처리 진행사항 실시간 화면 노출",
-      //   "GitHub Action 을 통한 배포 자동화 (Docker, AWS ECR, ECS) + 슬랙 배포 알림 추가",
-      //   "AWS Lambda 크론 기능 사용 - 통계 계산, 미진행 작업 재진행, 일일 가입자 슬랙 알림",
-      //   "작업 조회 및 상세 연동 내역 조회가 가능한 어드민 추가 개발",
-      // ],
+
+      detail: {
+        myParts: [
+          {
+            title: "Client",
+            content: [
+              "모바일 반응형 지원",
+              "Next.js 기본 구조를 통한 빠른 개발 가능 - SSR 이기에 서버만 띄우면 됨",
+              "Socket 을 통한 상품이전 진행사항을 클라이언트에 실시간 노출",
+              "작업 조회/통계 어드민 개발",
+            ],
+          },
+          {
+            title: "Server",
+            content: [
+              "SNS, SQS 를 통한 대기열 구조 구현 - 한 사용자당 작업이 오래 걸리기에 동시 실행 작업 제한 및 순차 실행 (느슨한 연결)",
+              "병렬 처리 로직 구현 - 이전 할 상품이 많을 경우 말도 안되게 시간이 오래걸리므로, 여러 작업으로 쪼개어 빠른 처리",
+              "타 마켓의 상품 데이터 => 쿠팡 상품 데이터로 가공 및 전달 로직 구현",
+              // "사내 통합회원 API 를 통한 인증/인가 구현",
+              "작업 조회/통계 어드민 개발 - Lambda 를 통한 통계 데이터 주기적 계산 및 생성 (실시간 조회가 필요 없으며, 데이터가 너무 많음)",
+              "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
+            ],
+          },
+          "쿠팡측과의 지속적인 미팅 및 메일을 통한 의사소통을 통해 전반적인 프로젝트 진행",
+          "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
+        ],
+        resultAndPerformance: [
+          "누적 이전 상품 수 : 71,133,478 / 누적 신규 사용자 수 67,006 - 2022.03.23 기준",
+          "플레이오토 회사 인지도 상승 및 사용자 인입으로 인한 유료 회원 전환률 상승 기대",
+          "제휴사(쿠팡) 로부터 계약금을 통한 매출 증가 기여",
+          // "개발자 - 더 이상 소스파편화로 스트레스를 받지 않음 ",
+        ],
+      },
       skill: [
-        "React",
         "Next.js",
         "Node.js",
         "Socket.io",
         "Sass",
         // "C Sharp",
+        "Amazon S3",
+        // "Amazon RDS",
         "Amazon ECS",
         "Amazon CloudWatch",
+        "Amazon SQS",
+        "AWS Lambda",
         "Docker",
         "GitHub Actions",
         "Mysql",
         "JSON Web Tokens",
       ],
     },
-    {
-      name: "셀러봇캐시 전용 REST API 개발",
-      company: companyData.playauto,
-      period: "2020.12",
-      people: 1,
-      content: `플레이오토에 인입된 업체에게 셀러봇캐시 연동 서비스 제공<br/>
-                    여러 영역 중 API 부분을 맡아 개발<br/>
-                    플레이오토 내 저장된 쇼핑몰 계정정보를 셀러봇캐시 측에 REST API 로 제공
-                        `,
-      // detail: [
-      //   "제휴 업체 전용 REST API 구조 개발 - 추후 제휴 업체 인입 시 해당 구조 재사용 가능하도록",
-      //   "GitHub Action 을 통한 배포 자동화 (Docker, AWS ECR, ECS) + 슬랙 배포 알림 추가",
-      // ],
-      skill: [
-        "Node.js",
+    // {
+    //   name: "셀러봇캐시 전용 REST API 개발",
+    //   company: companyData.playauto,
+    //   period: "2020.12",
+    //   people: 1,
+    //   content: `플레이오토에 인입된 업체에게 셀러봇캐시 연동 서비스 제공<br/>
+    //                 여러 영역 중 API 부분을 맡아 개발<br/>
+    //                 플레이오토 내 저장된 쇼핑몰 계정정보를 셀러봇캐시 측에 REST API 로 제공
+    //                     `,
+    //   // detail: [
+    //   //   "제휴 업체 전용 REST API 구조 개발 - 추후 제휴 업체 인입 시 해당 구조 재사용 가능하도록",
+    //   //   "GitHub Action 을 통한 배포 자동화 (Docker, AWS ECR, ECS) + 슬랙 배포 알림 추가",
+    //   // ],
+    //   skill: [
+    //     "Node.js",
 
-        "Mysql",
-        "OpenAPI Initiative",
-        "ReDoc",
-        "Amazon ECS",
-        "Amazon CloudWatch",
-        "Docker",
-        "GitHub Actions",
-      ],
-    },
-    {
-      name: "펀앤쇼핑 쇼핑몰 엔진 연동 개발",
-      company: companyData.playauto,
-      period: "2020.06 ~ 2020.07",
-      people: 1,
-      content: `플레이오토 EMP 솔루션 내 엔진 쇼핑몰 연동 개발<br/>
-                    스크랩핑을 통해 펀앤쇼핑 어드민 기능을 HTTP 통신으로 구현
-                        `,
-      // detail: [
-      //   "상품 - 상품등록, 상품수정, 상품동기화, 상품가져오기, 상품취소, 상품일시품절, 상품품절복구 구현",
-      //   "주문 - 발주확인, 주문수집, 주문동기화, 송장전송 구현",
-      //   "문의 - 문의 수집, 문의 답변전송, 상품평 수집, 상품평 답변전송 구현",
-      // ],
-      skill: ["C Sharp", "PHP", "JavaScript", "jQuery"],
-    },
+    //     "Mysql",
+    //     "OpenAPI Initiative",
+    //     "ReDoc",
+    //     "Amazon ECS",
+    //     "Amazon CloudWatch",
+    //     "Docker",
+    //     "GitHub Actions",
+    //   ],
+    // },
+    // {
+    //   name: "펀앤쇼핑 쇼핑몰 엔진 연동 개발",
+    //   company: companyData.playauto,
+    //   period: "2020.06 ~ 2020.07",
+    //   people: 1,
+    //   content: `플레이오토 EMP 솔루션 내 엔진 쇼핑몰 연동 개발<br/>
+    //                 스크랩핑을 통해 펀앤쇼핑 어드민 기능을 HTTP 통신으로 구현
+    //                     `,
+    //   // detail: [
+    //   //   "상품 - 상품등록, 상품수정, 상품동기화, 상품가져오기, 상품취소, 상품일시품절, 상품품절복구 구현",
+    //   //   "주문 - 발주확인, 주문수집, 주문동기화, 송장전송 구현",
+    //   //   "문의 - 문의 수집, 문의 답변전송, 상품평 수집, 상품평 답변전송 구현",
+    //   // ],
+    //   skill: ["C Sharp", "PHP", "JavaScript", "jQuery"],
+    // },
     {
       name: "플토 통합홈페이지 EMP API 개발",
       company: companyData.playauto,
@@ -392,6 +508,23 @@ const data: IProps = {
       //   "기능 - AES 암호화/복호화",
       // ],
 
+      detail: {
+        myParts: [
+          {
+            title: "Server",
+            content: [
+              "기존 홈페이지 기능을 타팀에서 사용할 수 있도록 API 제공 및 구조 개발",
+              "회원/솔루션 관련 - 회원정보 수정, 회원 탈퇴 신청, 회원 탈퇴 복구, 통합회원 전환, 사용중인 솔루션 정보, 솔루션 재신청, 로그인, 사업자 번호 조회",
+              "쇼핑몰 관련 - 지원쇼핑몰 조회",
+              "통합 어드민 관련 - 영업 담당자 업데이트, 사업자 등록증 업데이트, 사업자 유형 업데이트, 솔루션 전체 조회, 솔루션 상세 조회, EMP 솔루션 사용 여부",
+              "도움말/문의 관련 - 도움말 리스트 검색, Best/최신 도움말 리스트 검색, 도움말 상세 검색, 비회원 1:1 문의",
+            ],
+          },
+          "타팀과의 지속적인 의사소통을 통해 기능 구현",
+        ],
+        resultAndPerformance: ["통합홈페이지를 통한 사용자 인입 분산 감소"],
+      },
+
       skill: ["PHP", "Mysql", "OpenAPI Initiative", "ReDoc"],
     },
     // {
@@ -410,23 +543,23 @@ const data: IProps = {
     //   ],
     //   skill: ["React", "Material-UI", "Webpack", "Amazon AWS"],
     // },
+    // {
+    //   name: "메이크글로벌 쇼핑몰 엔진 연동 개발",
+    //   company: companyData.playauto,
+    //   period: "2019.04 ~ 2019.05",
+    //   people: 1,
+    //   content: `플레이오토 EMP 솔루션 내 엔진 쇼핑몰 연동 개발<br/>
+    //                 스크랩핑을 통해 메이크글로벌 어드민 기능을 HTTP 통신으로 구현
+    //                     `,
+    //   // detail: [
+    //   //   "상품 - 상품등록, 상품수정, 상품동기화, 상품가져오기, 상품취소, 상품일시품절, 상품품절복구 구현",
+    //   //   "주문 - 발주확인, 주문수집, 주문동기화, 송장전송 구현",
+    //   //   "문의 - 문의 수집, 문의 답변전송, 상품평 수집, 상품평 답변전송 구현",
+    //   // ],
+    //   skill: ["C Sharp", "PHP", "JavaScript", "jQuery"],
+    // },
     {
-      name: "메이크글로벌 쇼핑몰 엔진 연동 개발",
-      company: companyData.playauto,
-      period: "2019.04 ~ 2019.05",
-      people: 1,
-      content: `플레이오토 EMP 솔루션 내 엔진 쇼핑몰 연동 개발<br/>
-                    스크랩핑을 통해 메이크글로벌 어드민 기능을 HTTP 통신으로 구현
-                        `,
-      // detail: [
-      //   "상품 - 상품등록, 상품수정, 상품동기화, 상품가져오기, 상품취소, 상품일시품절, 상품품절복구 구현",
-      //   "주문 - 발주확인, 주문수집, 주문동기화, 송장전송 구현",
-      //   "문의 - 문의 수집, 문의 답변전송, 상품평 수집, 상품평 답변전송 구현",
-      // ],
-      skill: ["C Sharp", "PHP", "JavaScript", "jQuery"],
-    },
-    {
-      name: "쇼핑몰 통합관리 솔루션 EMP / 홈페이지 / 사내 어드민 유지보수",
+      name: "쇼핑몰 통합관리 솔루션 EMP / 사내 어드민 유지보수",
       company: companyData.playauto,
       period: "2018.10 ~ 2019.12",
       people: [7, 8],
@@ -435,8 +568,18 @@ const data: IProps = {
                     HTTP 통신, 화면 제어 및 다양한 쇼핑몰별 구조, e-commerce 시장에 대한 이해도 증가<br/>
                     10년을 넘게 서비스해온 솔루션 유지보수를 맡으면서 유지보수의 중요성 및 기존 소스 분석력 증가
                         `,
-
-      skill: ["C Sharp", "PHP", "JavaScript", "jQuery"],
+      detail: {
+        myParts: [
+          "API 제공 쇼핑몰과의 메일을 통한 직접적인 커뮤니케이션 진행",
+          "CS 팀에서 생성한 일감에 대해 비개발적인 용어로 커뮤니케이션 진행",
+          "약 900건의 기능 개발 및 유지보수 업무 처리",
+        ],
+        resultAndPerformance: [
+          "다양한 기능 개발 및 유지보수 업무를 통해 솔루션 사용자 문의 처리",
+          "커뮤니케이션 능력 상승",
+        ],
+      },
+      skill: ["C Sharp", "PHP", "JavaScript", "jQuery", "Mysql"],
     },
   ],
   posts: [

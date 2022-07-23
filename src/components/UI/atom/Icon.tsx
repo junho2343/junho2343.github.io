@@ -172,6 +172,11 @@ const iconMapData = {
     color: "white",
     origin: null,
   },
+  "Amazon SQS": {
+    background: "FF4F8B",
+    color: "white",
+    origin: null,
+  },
 };
 
 export type IconType = keyof typeof iconMapData;
