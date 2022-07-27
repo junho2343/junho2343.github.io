@@ -103,10 +103,10 @@ const data: IProps = {
       period: "2022.05 ~ 2022.07",
       people: 3,
       content: `
-      c#, PHP 기반의 솔루션에서 일부 영역 속도 개선이 불가하여 서비스 분리 및 리팩토링 결정<br/>
-      설치 프로그램의 단점을 보완하기 위해 상시 배포 가능한 웹으로 클라이언트 영역 리팩토링<br/>
-      소스관리, 자동완성, 타입추론, 배포 자동화, 쿼리 개선 등을 위해 서버영역 리팩토링<br/>
-      솔루션 특성상 비슷하지만 조금씩 다른 API 기능들이 많이 필요하여 언더패치, 오버패치 해결을 위한 GraphQL 도입<br/>
+      c#, PHP 기반 솔루션 내 상품상세 영역 속도 개선 및 불편사항 해결을 위해 서비스 분리 및 리팩토링 결정<br/>
+      - 클라이언트 영역: 설치 프로그램의 단점을 보완하기 위해 상시 배포 가능한 웹으로 리팩토링<br/>
+      - 서버 영역: 소스관리, 자동완성, 타입추론, 배포 자동화, 쿼리 개선 등을 위해 리팩토링<br/>
+      솔루션 특성상 비슷하지만 조금씩 다른 API를 줄이기 위해 언더패치, 오버패치 해결을 위한 GraphQL 도입<br/>
       (c# -> React / PHP -> NestJS)
                     `,
       detail: {
@@ -122,7 +122,7 @@ const data: IProps = {
             title: "Server",
             content: [
               "GraphQL 기반의 NestJS 구조 및 API 개발",
-              "기존 PHP의 인증/인가 방식과 각 업체별 부여된 Database 를 그대로 사용할 수 있도록 구조 개발",
+              "기존 PHP 인증/인가 방식 활용과 분리된 서비스의 데이터 주고받는 구조 개발",
               "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
             ],
           },
@@ -131,7 +131,7 @@ const data: IProps = {
         resultAndPerformance: [
           "첫 로딩 속도 및 저장 기능 속도개선 - 약 3~4초 => 1초 미만",
           "C# => 웹 리팩토링으로 상시 배포 가능",
-          "GraphQL 도입으로 비슷한 API 수 감소",
+          "GraphQL 도입으로 중복되는 API 기능 감소",
         ],
       },
       skill: [
@@ -167,18 +167,18 @@ const data: IProps = {
           {
             title: "스크랩핑",
             content: [
-              "AWS Lambda 사용 - IP 차단 방지를 위해 사내 외 IP, 주기적 변경되는 IP",
+              "AWS Lambda 사용 - IP 차단 방지를 위한 사내 외 IP / 주기적 변경되는 IP / 상시 가동 불필요",
               "네이버 쇼핑 랭킹 상품 스크랩핑 소스 개발 - 격주마다 크론 실행",
               // "AWS Lambda 최대 시간 초과 값(15분) 으로 인해 자신의 함수를 재호출 하는 방식으로 개발",
               // "실행시간이 오래걸리므로 응답을 기다리지 않도록 Amazon API Gateway 를 비동기적으로 호출",
-              "AWS Lambda 소스 관리를 위해 Serverless Framework 를 활용하여 구조 개발",
+              "AWS Lambda 소스 관리를 위해 Serverless Framework 를 활용한 구조 개발",
             ],
           },
           {
             title: "Server(NestJS)",
             content: [
-              "위 AWS Lambda 를 통한 스크랩핑 결과 저장용 API 개발",
-              "스크랩핑한 정보를 기반으로 데이터를 가공하여 쿠팡에 전달하는 소스 개발 - 매일 새벽 크론 실행",
+              // "위 AWS Lambda 를 통한 스크랩핑 결과 저장용 API 개발",
+              "스크랩핑한 정보를 기반으로 데이터 가공 후 쿠팡에 전달하는 구조 개발 - 매일 새벽 크론 실행",
               "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
             ],
           },
@@ -354,7 +354,7 @@ const data: IProps = {
             content: [
               "ORM 서비스 TypeORM 도입",
               "Node.js => NestJS 도입",
-              "Database - IDC => AWS RDS 마이그레이션",
+              "IDC Database => AWS RDS 마이그레이션",
               "Amazon Aurora 를 통한 읽기, 쓰기 DB 및 쿼리 분리",
               "Database 구조 개선 - 제휴사별 서비스 제공 가능하도록",
               "핵심 기능들 공통화",
@@ -419,11 +419,11 @@ const data: IProps = {
           {
             title: "Server",
             content: [
-              "Event Driven 패턴을 통한 느슨한 연결(loose coupling) / SNS, SQS 를 통한 대기열 구조 구현 - 상품 정보 수집, 상품 데이터 가공 및 전송 영역 중 데이터 유실을 막기 위해",
+              "SNS, SQS 를 통한 대기열 구조 구현 (Event Driven 패턴) - 데이터 유실 방지 / 작업이 오래 걸려 비동기 처리",
               // "병렬 처리 로직 구현 - 이전 할 상품이 많을 경우 위 SNS 를 여러개 발행해 병렬 작업 수행",
               // "타 마켓의 상품 데이터 => 쿠팡 상품 데이터로 가공 및 전달 로직 구현",
               // "사내 통합회원 API 를 통한 인증/인가 구현",
-              "작업 조회/통계 어드민 개발 - Lambda 를 통한 통계 데이터 주기적 계산 및 생성 (실시간 조회가 필요 없으며, 데이터가 너무 많음)",
+              "작업 조회/통계 어드민 개발 - Lambda 를 통한 통계 데이터 주기적 계산 및 생성 (Database 자원 사용 최소화)",
               "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
             ],
           },
