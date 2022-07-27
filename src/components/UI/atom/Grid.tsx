@@ -100,6 +100,8 @@ const Grid = styled.div<IProps>`
   ${({ border }) => (border ? `border: ${border};` : "")}
 
   word-break: break-all;
+
+  position: relative;
 `;
 
 // function Grid(props: IProps) {

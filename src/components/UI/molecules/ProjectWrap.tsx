@@ -4,6 +4,7 @@ import Text from "components/UI/atom/Text";
 import Icon from "components/UI/atom/Icon";
 import Accordion from "components/UI/molecules/Accordion";
 import React from "react";
+import styled from "styled-components";
 
 interface IProps {
   data: ProjectType;
@@ -12,7 +13,7 @@ interface IProps {
 function ProjectWrap({ data }: IProps) {
   return (
     <Grid bottom={50}>
-      <Grid bottom={10}>
+      <StarGrid bottom={10} best={data.best}>
         {data.href ? (
           <a href={data.href} target="_blank" rel="noreferrer">
             <Text fontSize="1.4rem" inline color="main">
@@ -46,7 +47,7 @@ function ProjectWrap({ data }: IProps) {
             | {data.period}
           </Text>
         )}
-      </Grid>
+      </StarGrid>
 
       <Text dangerouslySetInnerHTML={{ __html: data.content }} />
 
@@ -98,3 +99,14 @@ function ProjectWrap({ data }: IProps) {
 }
 
 export default ProjectWrap;
+
+const StarGrid = styled(Grid)<{ best?: boolean }>`
+  ::before {
+    content: "★";
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    display: ${({ best }) => (best ? "block" : "none")};
+    color: #f7ce14;
+  }
+`;
