@@ -70,7 +70,7 @@ const data: IProps = {
         "쿠팡 전용 네이버쇼핑 랭킹 스크랩핑 및 데이터 전달 구조 개발",
         "상품 이전 웹 서비스 공통화 모델 개발 - 쿠팡 / 위메프 / 11번가 / 올웨이즈 제공",
         {
-          text: "쿠팡 상품 이전 웹 서비스 개발",
+          text: "쿠팡 상품 이전 웹 서비스 개발 - Event Driven 아키텍처",
           href: "https://marketplace.coupangcorp.com/s/blog/salenews-20210205-MCZJCYSUZLN5BAJLH2WG2GNZVXEQ",
         },
         "솔루션 내 상품상세 영역 서비스 분리 및 리팩토링 (c# -> React,  PHP -> NestJS)",
