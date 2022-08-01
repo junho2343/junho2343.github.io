@@ -182,6 +182,11 @@ const iconMapData = {
     color: "white",
     origin: null,
   },
+  Redis: {
+    background: "DC382D",
+    color: "white",
+    origin: null,
+  },
 };
 
 export type IconType = keyof typeof iconMapData;

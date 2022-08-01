@@ -115,14 +115,14 @@ const data: IProps = {
             title: "Client",
             content: [
               "styled-components 를 통한 컴포넌트 분리 및 프론트 구조 개발",
-              "Apollo Client 를 통한 상태관리 구조 개발",
+              "Apollo Client - Reactive variables 를 통한 상태관리 구조 개발",
             ],
           },
           {
             title: "Server",
             content: [
               "GraphQL 기반의 NestJS 구조 및 API 개발",
-              "기존 PHP 인증/인가 방식 활용과 분리된 서비스의 데이터 주고받는 구조 개발",
+              "기존 PHP 인증/인가 방식 활용 및 PHPSESSID 로 Redis 를 통한 데이터 주고받는 구조 개발",
               "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현 - AWS ALB 를 통한 요청 트래픽 분산",
             ],
           },
@@ -148,6 +148,7 @@ const data: IProps = {
         "Docker",
         "GitHub Actions",
         "Mysql",
+        "Redis",
       ],
     },
 
@@ -389,6 +390,7 @@ const data: IProps = {
         "Mysql",
         "JSON Web Tokens",
         "TypeORM",
+        "Redis",
       ],
     },
 
@@ -420,6 +422,7 @@ const data: IProps = {
             title: "Server",
             content: [
               "SNS, SQS 를 통한 대기열 구조 구현 (Event Driven 패턴) - 데이터 유실 방지 / 작업이 오래 걸려 비동기 처리",
+              "SQS 의 고유한 key 에 따라 Redis 내 상세 정보 임시 저장",
               // "병렬 처리 로직 구현 - 이전 할 상품이 많을 경우 위 SNS 를 여러개 발행해 병렬 작업 수행",
               // "타 마켓의 상품 데이터 => 쿠팡 상품 데이터로 가공 및 전달 로직 구현",
               // "사내 통합회원 API 를 통한 인증/인가 구현",
@@ -453,6 +456,7 @@ const data: IProps = {
         "GitHub Actions",
         "Mysql",
         "JSON Web Tokens",
+        "Redis",
       ],
     },
     // {
