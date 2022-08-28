@@ -356,7 +356,7 @@ const data: IProps = {
               "ORM 서비스 TypeORM 도입",
               "Node.js => NestJS 도입",
               "IDC Database => AWS RDS 마이그레이션",
-              "Amazon Aurora 를 통한 읽기, 쓰기 DB 및 쿼리 분리",
+              "Amazon Aurora 를 통한 쓰기(Master), 읽기(Slave) DB 분리 - MySQL Replication",
               "Database 구조 개선 - 제휴사별 서비스 제공 가능하도록",
               "핵심 기능들 공통화",
             ],
