@@ -100,13 +100,12 @@ const data: IProps = {
     {
       name: "솔루션 내 상품상세 영역 서비스 분리 및 리팩토링",
       company: companyData.playauto,
-      period: "2022.05 ~ 2022.07",
+      period: "2022.04 ~ 2022.07",
       people: 3,
       content: `
       c#, PHP 기반 솔루션 내 상품상세 영역 속도 개선 및 불편사항 해결을 위해 서비스 분리 및 리팩토링 결정<br/>
       - 클라이언트 영역: 설치 프로그램의 단점을 보완하기 위해 상시 배포 가능한 웹으로 리팩토링<br/>
       - 서버 영역: 소스관리, 자동완성, 타입추론, 배포 자동화 등을 위해 리팩토링<br/>
-      솔루션 특성상 일부 데이터를 얻기 위해 동일한 API를 자주 사용하여 언더패치, 오버패치 해결을 위한 GraphQL 도입<br/>
       (c# -> React / PHP -> NestJS)
                     `,
       detail: {
@@ -153,10 +152,9 @@ const data: IProps = {
     },
 
     {
-      best: true,
       name: "쿠팡 전용 네이버쇼핑 랭킹 스크랩핑 및 정보 전달 구조 개발",
       company: companyData.playauto,
-      period: "2022.04 ~ 2022.05",
+      period: "2022.02 ~ 2022.04",
       people: 2,
       content: `
       \`상품 이전 웹 서비스\`의 고도화로 많은 양의 상품을 이전 했지만 양질의 상품을 구분할 수 없음<br/>
@@ -213,56 +211,56 @@ const data: IProps = {
         "Serverless",
       ],
     },
-    {
-      name: "통합 지원쇼핑몰 어드민 개발",
-      company: companyData.playauto,
-      period: "2022.02",
-      people: 2,
-      content: `
-       사내 솔루션 별로 지원 쇼핑몰관리 어드민이 각각 존재하여 한번에 관리할 수 있는 통합 어드민 개발<br/>
-       솔루션 별로 각각 상이한 database 스키마 통합
-                    `,
+    // {
+    //   name: "통합 지원쇼핑몰 어드민 개발",
+    //   company: companyData.playauto,
+    //   period: "2022.02",
+    //   people: 2,
+    //   content: `
+    //    사내 솔루션 별로 지원 쇼핑몰관리 어드민이 각각 존재하여 한번에 관리할 수 있는 통합 어드민 개발<br/>
+    //    솔루션 별로 각각 상이한 database 스키마 통합
+    //                 `,
 
-      detail: {
-        myParts: [
-          {
-            title: "Client",
-            content: ["페이징 처리 및 API 연결"],
-          },
-          {
-            title: "Server",
-            content: [
-              "솔루션별 database 스키마 통합",
-              "엑셀 통한 등록/수정 기능 개발",
-              "사내 API용 구조 개발 및 통합된 데이터 조회 API 개발",
-              "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현",
-            ],
-          },
+    //   detail: {
+    //     myParts: [
+    //       {
+    //         title: "Client",
+    //         content: ["페이징 처리 및 API 연결"],
+    //       },
+    //       {
+    //         title: "Server",
+    //         content: [
+    //           "솔루션별 database 스키마 통합",
+    //           "엑셀 통한 등록/수정 기능 개발",
+    //           "사내 API용 구조 개발 및 통합된 데이터 조회 API 개발",
+    //           "빌드된 Docker 이미지 기반으로 AWS ECR, ECS 를 통해 백엔드 서버 구현",
+    //         ],
+    //       },
 
-          "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
-        ],
-        resultAndPerformance: [
-          "지원 쇼핑몰 추가/수정 시 관리 영역 통합으로 인한 리소스 감소",
-        ],
-      },
-      // detail: [
-      //   "관리자 전용 어드민 페이지 개발 - 엑셀 일괄 업로드, 엑셀 일괄 수정, 엑셀 다운로드, 검색, 부분등록, 부분수정",
-      //   "통합된 데이터를 각 솔루션에서 사용할 수 있도록 사내용 조회 API 제공",
-      // ],
-      skill: [
-        "React",
-        "TypeScript",
-        "styled-components",
-        "Amazon S3",
-        "NestJS",
-        "Amazon ECS",
-        "Amazon RDS",
-        "Amazon CloudWatch",
-        "Docker",
-        "GitHub Actions",
-        "Mysql",
-      ],
-    },
+    //       "GitHub Actions 를 통한 배포 자동화, 슬랙 배포 알림 구현",
+    //     ],
+    //     resultAndPerformance: [
+    //       "지원 쇼핑몰 추가/수정 시 관리 영역 통합으로 인한 리소스 감소",
+    //     ],
+    //   },
+    //   // detail: [
+    //   //   "관리자 전용 어드민 페이지 개발 - 엑셀 일괄 업로드, 엑셀 일괄 수정, 엑셀 다운로드, 검색, 부분등록, 부분수정",
+    //   //   "통합된 데이터를 각 솔루션에서 사용할 수 있도록 사내용 조회 API 제공",
+    //   // ],
+    //   skill: [
+    //     "React",
+    //     "TypeScript",
+    //     "styled-components",
+    //     "Amazon S3",
+    //     "NestJS",
+    //     "Amazon ECS",
+    //     "Amazon RDS",
+    //     "Amazon CloudWatch",
+    //     "Docker",
+    //     "GitHub Actions",
+    //     "Mysql",
+    //   ],
+    // },
     {
       name: "솔루션 내 레거시 웹 영역 리팩토링",
       company: companyData.playauto,
@@ -335,7 +333,7 @@ const data: IProps = {
       company: companyData.playauto,
       period: "2021.04 ~ 2021.07",
       people: 2,
-      content: `쿠팡에 제공 했던 상품 이전 웹 서비스 WakeUp 을 여러 쇼핑몰 제공을 위해 공통화 버전 개발<br/>
+      content: `쿠팡에 제공 했던 상품 이전 웹 서비스를 여러 제휴사 쇼핑몰 제공을 위해 공통화 버전 개발<br/>
                 DB 리팩토링 및 구조적인 개선 함께 진행 - 쿠팡 / 위메프 / 11번가 / 올웨이즈 제공중
                     `,
       // detail: [
