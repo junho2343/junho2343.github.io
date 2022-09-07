@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-[300];
+
+    font-family: "Lato", sans-serif;
+    letter-spacing: 0.5px;
+    /* box-sizing: border-box; */
+  }
+
+  h1 {
+    @apply text-3xl font-[700];
+  }
+  h2 {
+    @apply text-2xl font-[400];
+  }
+  h3 {
+    @apply text-xl;
+  }
+
+  ul {
+    @apply pl-5;
+  }
+  li {
+    @apply list-disc pt-2;
+  }
+
+  a {
+    @apply text-primary hover:hover:underline;
+  }
+
+  /* ... */
+}
