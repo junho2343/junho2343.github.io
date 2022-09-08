@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import AboutType from "interfaces/about";
 import { TITLE_TAG } from "lib/constants";
+import Meta from "components/meta";
 
 const data: AboutType = {
   career: [
@@ -43,6 +44,7 @@ const data: AboutType = {
 const About = () => {
   return (
     <>
+      <Meta />
       <Head>
         <title>About Me {TITLE_TAG}</title>
       </Head>

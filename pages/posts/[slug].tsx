@@ -8,6 +8,7 @@ import type PostType from "interfaces/post";
 import markdownStyles from "components//markdown-styles.module.css";
 import DateFormatter from "components/atoms/date-formatter";
 import CoverImage from "components/atoms/cover-image";
+import Meta from "components/meta";
 
 type Props = {
   post: PostType;
@@ -20,6 +21,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 
   return (
     <div className="relative">
+      <Meta />
       <div className="max-w-3xl pt-14">
         {router.isFallback ? (
           <>Loading…</>

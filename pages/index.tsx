@@ -6,6 +6,7 @@ import { TITLE_TAG } from "lib/constants";
 import Post from "interfaces/post";
 import CoverImage from "components/atoms/cover-image";
 import DateFormatter from "components/atoms/date-formatter";
+import Meta from "components/meta";
 
 type Props = {
   allPosts: Post[];
@@ -14,8 +15,9 @@ type Props = {
 export default function Index({ allPosts }: Props) {
   return (
     <>
+      <Meta />
       <Head>
-        <title>게시물 {TITLE_TAG}</title>
+        <title>개발자 {TITLE_TAG}</title>
       </Head>
 
       <div className="flex flex-wrap">

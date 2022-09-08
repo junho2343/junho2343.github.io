@@ -1,6 +1,5 @@
 import Footer from "components/layout/footer";
 import Container from "components/layout/container";
-import Meta from "components/meta";
 import Header from "components/layout/header";
 
 type Props = {
@@ -10,8 +9,6 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <Meta />
-
       <Header />
 
       <div className="min-h-screen flex items-center flex-col relative">

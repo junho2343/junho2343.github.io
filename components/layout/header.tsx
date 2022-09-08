@@ -1,4 +1,5 @@
 import Container from "components/layout/container";
+import Meta from "components/meta";
 import Link from "next/link";
 import React from "react";
 
