@@ -1,40 +1,54 @@
-import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
-// import Layout from "../components/layout";
-import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
-import Post from "../interfaces/post";
+import Link from "next/link";
+
+import { getAllPosts } from "lib/api";
+import { TITLE_TAG } from "lib/constants";
+import Post from "interfaces/post";
+import CoverImage from "components/atoms/cover-image";
+import DateFormatter from "components/atoms/date-formatter";
 
 type Props = {
   allPosts: Post[];
 };
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-
   return (
     <>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>게시물 {TITLE_TAG}</title>
       </Head>
-      <Container>
-        <Intro />
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
+
+      <div className="flex flex-wrap">
+        {allPosts.map((one, index) => (
+          <Link as={`/posts/${one.slug}`} href="/posts/[slug]" key={index}>
+            <div
+              className={`inline-block w-full my-3 bg-gray-50 rounded overflow-hidden cursor-pointer 
+              
+
+              md:w-[calc(100%/3-1rem)]
+              md:m-3
+              ${index % 3 === 0 && "md:ml-0"} 
+              ${index % 3 === 2 && "md:mr-0"}
+              `}
+            >
+              <CoverImage src={one.coverImage} />
+
+              <div className="p-3">
+                <h3 className="line-clamp-2 mb-3">{one.title}</h3>
+                <p className="line-clamp-3 text-sm">{one.excerpt}</p>
+                <p className="pt-3 flex items-center">
+                  <img
+                    src="/assets/icon_time.svg"
+                    alt=""
+                    className="mr-1 mb-0.5 w-5"
+                  />
+                  <DateFormatter dateString={one.date} />
+                </p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </>
   );
 }

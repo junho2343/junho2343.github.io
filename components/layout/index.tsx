@@ -11,9 +11,11 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Meta />
-      <div className="flex items-center flex-col relative">
+
+      <Header />
+
+      <div className="min-h-screen flex items-center flex-col relative">
         <Container>
-          <Header />
           {/* <div className="min-h-screen"> */}
           {/* <Alert preview={preview} /> */}
           <main>{children}</main>

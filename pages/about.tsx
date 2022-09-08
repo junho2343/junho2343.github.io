@@ -1,24 +1,9 @@
-import React from "react";
+import Head from "next/head";
 
-type Data = {
-  career: Career[];
-  awardsAndCertificate: AwardsAndCertificate[];
-};
+import AboutType from "interfaces/about";
+import { TITLE_TAG } from "lib/constants";
 
-type Career = {
-  companyName: string;
-  period: string;
-  href: string;
-  summary: (string | { text: string; href: string })[];
-};
-
-type AwardsAndCertificate = {
-  name: string;
-  period: string;
-  href: string;
-};
-
-const data: Data = {
+const data: AboutType = {
   career: [
     {
       companyName: "플레이오토(PLAYAUTO)",
@@ -58,6 +43,9 @@ const data: Data = {
 const About = () => {
   return (
     <>
+      <Head>
+        <title>About Me {TITLE_TAG}</title>
+      </Head>
       <h2 className="pt-10">문준호</h2>
       <p>Developer | ✉️ junho234323@gmail.com | 2000.10.15</p>
       <p className="pt-3">
@@ -66,7 +54,7 @@ const About = () => {
       </p>
       <p>
         TypeScript, Node.js, NestJS, React 를 주로 사용하며 AWS 를 활용한
-        아키텍처에 관심을 가지고 있습니다.
+        아키텍처 설계에 관심을 가지고 있습니다.
       </p>
 
       <h2 className="pt-10">경력</h2>

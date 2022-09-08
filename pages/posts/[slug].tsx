@@ -1,16 +1,13 @@
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
-import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
-import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
-import markdownToHtml from "../../lib/markdownToHtml";
-import type PostType from "../../interfaces/post";
+import { useRouter } from "next/router";
+
+import { getPostBySlug, getAllPosts } from "lib/api";
+import { TITLE_TAG } from "lib/constants";
+import markdownToHtml from "lib/markdownToHtml";
+import type PostType from "interfaces/post";
+import markdownStyles from "components//markdown-styles.module.css";
+import DateFormatter from "components/atoms/date-formatter";
+import CoverImage from "components/atoms/cover-image";
 
 type Props = {
   post: PostType;
@@ -19,41 +16,45 @@ type Props = {
 };
 
 export default function Post({ post, morePosts, preview }: Props) {
-  console.log("durl");
-  console.log(preview);
-
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-  return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
 
+  return (
+    <div className="relative">
+      <div className="max-w-3xl pt-14">
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <>Loading…</>
         ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
+          <article className="mb-32">
+            <Head>
+              <title>
+                {post.title} {TITLE_TAG}
+              </title>
+              <meta property="og:image" content={post.ogImage.url} />
+            </Head>
+
+            <div>
+              <h1>{post.title}</h1>
+              <div className="mb-6 text-lg">
+                <DateFormatter dateString={post.date} />
+              </div>
+              <CoverImage src={post.coverImage} />
+            </div>
+
+            <div
+              className={markdownStyles["markdown"]}
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </article>
         )}
-      </Container>
-    </Layout>
+      </div>
+      <div className="absolute right-0 top-3">
+        <a href="https://hits.seeyoufarm.com">
+          <img
+            src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunho2343.github.io%2Fhit-counter%2F${post.slug}&count_bg=%230366D6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=&edge_flat=false`}
+          />
+        </a>
+      </div>
+    </div>
   );
 }
 
@@ -68,7 +69,6 @@ export async function getStaticProps({ params }: Params) {
     "title",
     "date",
     "slug",
-    "author",
     "content",
     "ogImage",
     "coverImage",
