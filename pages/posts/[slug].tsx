@@ -9,6 +9,7 @@ import markdownStyles from "components//markdown-styles.module.css";
 import DateFormatter from "components/atoms/date-formatter";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
+import Utterances from "components/atoms/utterances";
 
 type Props = {
   post: PostType;
@@ -48,6 +49,8 @@ export default function Post({ post, morePosts, preview }: Props) {
             />
           </article>
         )}
+
+        <Utterances />
       </div>
       <div className="absolute right-0 top-3">
         <a href="https://hits.seeyoufarm.com">
