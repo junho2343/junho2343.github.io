@@ -6,8 +6,7 @@ const Utterances = () => {
   React.useEffect(() => {
     const script = document.createElement("script");
 
-    script.src =
-      "[https://utteranc.es/client.js](https://utteranc.es/client.js)";
+    script.src = "https://utteranc.es/client.js";
     script.async = true;
     script.setAttribute("repo", "junho2343/junho2343.github.io");
     script.setAttribute("issue-term", "pathname");
