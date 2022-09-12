@@ -34,12 +34,12 @@ export default function Post({ post, morePosts, preview }: Props) {
           <article className="mb-32">
             <Head>
               <title>
-                {post.slug} {TITLE_TAG}
+                {post.title} {TITLE_TAG}
               </title>
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
             <div className="pb-3">
-              <h1>{post.slug}</h1>
+              <h1>{post.title}</h1>
               <div className="mb-6 text-lg">
                 <DateFormatter dateString={post.date} />
               </div>

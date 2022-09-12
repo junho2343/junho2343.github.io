@@ -36,7 +36,7 @@ export default function Index({ allPosts }: Props) {
               <CoverImage src={one.coverImage} />
 
               <div className="p-3">
-                <h3 className="h-14 line-clamp-2 mb-2">{one.slug}</h3>
+                <h3 className="h-14 line-clamp-2 mb-2">{one.title}</h3>
                 <p className="h-16 line-clamp-3 text-sm">{one.excerpt}</p>
                 <p className="pt-3 flex items-center">
                   <img
@@ -57,6 +57,7 @@ export default function Index({ allPosts }: Props) {
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
+    "title",
     "date",
     "slug",
     "author",
