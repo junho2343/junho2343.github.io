@@ -24,7 +24,7 @@ export default function Index({ allPosts }: Props) {
         {allPosts.map((one, index) => (
           <Link as={`/posts/${one.slug}`} href="/posts/[slug]" key={index}>
             <div
-              className={`inline-block w-full my-3 bg-gray-50 rounded overflow-hidden cursor-pointer 
+              className={`inline-block w-full my-3 bg-white rounded overflow-hidden cursor-pointer shadow-sm
               
 
               md:w-[calc(100%/3-1rem)]
@@ -36,8 +36,8 @@ export default function Index({ allPosts }: Props) {
               <CoverImage src={one.coverImage} />
 
               <div className="p-3">
-                <h3 className="line-clamp-2 mb-3">{one.title}</h3>
-                <p className="line-clamp-3 text-sm">{one.excerpt}</p>
+                <h3 className="h-14 line-clamp-2 mb-2">{one.slug}</h3>
+                <p className="h-16 line-clamp-3 text-sm">{one.excerpt}</p>
                 <p className="pt-3 flex items-center">
                   <img
                     src="/assets/icon_time.svg"
@@ -57,7 +57,6 @@ export default function Index({ allPosts }: Props) {
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
-    "title",
     "date",
     "slug",
     "author",

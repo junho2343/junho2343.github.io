@@ -10,6 +10,7 @@ module.exports = {
         success: "#0070f3",
         cyan: "#79FFE1",
 
+        postText: "#545468",
         primary: "#0366d6",
       },
       spacing: {

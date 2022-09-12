@@ -1,9 +1,13 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 import { getPostBySlug, getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
-import markdownToHtml from "lib/markdownToHtml";
 import type PostType from "interfaces/post";
 import markdownStyles from "components//markdown-styles.module.css";
 import DateFormatter from "components/atoms/date-formatter";
@@ -30,22 +34,51 @@ export default function Post({ post, morePosts, preview }: Props) {
           <article className="mb-32">
             <Head>
               <title>
-                {post.title} {TITLE_TAG}
+                {post.slug} {TITLE_TAG}
               </title>
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
-
-            <div>
-              <h1>{post.title}</h1>
+            <div className="pb-3">
+              <h1>{post.slug}</h1>
               <div className="mb-6 text-lg">
                 <DateFormatter dateString={post.date} />
               </div>
               <CoverImage src={post.coverImage} />
             </div>
-
-            <div
-              className={markdownStyles["markdown"]}
+            {/* <div
+              className={markdownStyles["markdown-body"]}
               dangerouslySetInnerHTML={{ __html: post.content }}
+            /> */}
+            <ReactMarkdown
+              children={post.content}
+              rehypePlugins={[rehypeRaw]}
+              remarkPlugins={[remarkGfm]}
+              className={markdownStyles["markdown-body"]}
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || "");
+
+                  return !inline && match ? (
+                    <>
+                      <SyntaxHighlighter
+                        children={String(children).replace(/\n$/, "")}
+                        style={atomOneDark}
+                        language={match[1]}
+                        PreTag="div"
+                        showLineNumbers
+                        {...props}
+                      />
+                      <span className="absolute right-2 top-1 text-white">
+                        {match[1]}
+                      </span>
+                    </>
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
             />
           </article>
         )}
@@ -78,13 +111,13 @@ export async function getStaticProps({ params }: Params) {
     "ogImage",
     "coverImage",
   ]);
-  const content = await markdownToHtml(post.content || "");
+  // const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
       post: {
         ...post,
-        content,
+        content: post.content,
       },
     },
   };
