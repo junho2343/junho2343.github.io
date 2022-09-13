@@ -5,7 +5,6 @@ import { getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
 import Post from "interfaces/post";
 import CoverImage from "components/atoms/cover-image";
-import DateFormatter from "components/atoms/date-formatter";
 import Meta from "components/meta";
 
 type Props = {
@@ -44,7 +43,7 @@ export default function Index({ allPosts }: Props) {
                     alt=""
                     className="mr-1 mb-0.5 w-5"
                   />
-                  <DateFormatter dateString={one.date} />
+                  {one.date}
                 </p>
               </div>
             </div>
@@ -60,7 +59,6 @@ export const getStaticProps = async () => {
     "title",
     "date",
     "slug",
-    "author",
     "coverImage",
     "excerpt",
   ]);

@@ -10,7 +10,6 @@ import { getPostBySlug, getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
 import type PostType from "interfaces/post";
 import markdownStyles from "components//markdown-styles.module.css";
-import DateFormatter from "components/atoms/date-formatter";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Utterances from "components/atoms/utterances";
@@ -40,9 +39,7 @@ export default function Post({ post, morePosts, preview }: Props) {
             </Head>
             <div className="pb-3">
               <h1>{post.title}</h1>
-              <div className="mb-6 text-lg">
-                <DateFormatter dateString={post.date} />
-              </div>
+              <div className="mb-6 text-lg">{post.date}</div>
               <CoverImage src={post.coverImage} />
             </div>
             {/* <div

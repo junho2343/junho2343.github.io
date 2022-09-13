@@ -34,6 +34,8 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`개발자 ${TITLE_TAG}`} />
       <meta property="og:image" content="/favicon/social_preview.jpeg" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
     </Head>
   );
 };

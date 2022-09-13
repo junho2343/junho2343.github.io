@@ -2,7 +2,7 @@
 title: "Next.js 블로그 시작하기"
 excerpt: "필자가 블로그를 시작하게 된 계기들과 Next.js 로 블로그를 구현한 이유에 대해 정리한 내용입니다."
 coverImage: "/assets/blog/nextjs-blog-start/cover.JPG"
-date: "2022-09-12T05:00:00Z"
+date: "2022-09-12 19:00"
 ogImage:
   url: "/assets/blog/nextjs-blog-start/cover.JPG"
 ---
