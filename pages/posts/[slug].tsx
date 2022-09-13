@@ -49,37 +49,37 @@ export default function Post({ post, morePosts, preview }: Props) {
               className={markdownStyles["markdown-body"]}
               dangerouslySetInnerHTML={{ __html: post.content }}
             /> */}
-            {/* <ReactMarkdown
+            <ReactMarkdown
               children={post.content}
               rehypePlugins={[rehypeRaw]}
               remarkPlugins={[remarkGfm]}
               className={markdownStyles["markdown-body"]}
-              // components={{
-              //   code({ node, inline, className, children, ...props }) {
-              //     const match = /language-(\w+)/.exec(className || "");
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || "");
 
-              //     return !inline && match ? (
-              //       <>
-              //         <SyntaxHighlighter
-              //           children={String(children).replace(/\n$/, "")}
-              //           style={atomOneDark}
-              //           language={match[1]}
-              //           PreTag="div"
-              //           showLineNumbers
-              //           {...props}
-              //         />
-              //         <span className="absolute right-2 top-1 text-white">
-              //           {match[1]}
-              //         </span>
-              //       </>
-              //     ) : (
-              //       <code className={className} {...props}>
-              //         {children}
-              //       </code>
-              //     );
-              //   },
-              // }}
-            /> */}
+                  return !inline && match ? (
+                    <>
+                      <SyntaxHighlighter
+                        children={String(children).replace(/\n$/, "")}
+                        style={atomOneDark}
+                        language={match[1]}
+                        PreTag="div"
+                        showLineNumbers
+                        {...props}
+                      />
+                      <span className="absolute right-2 top-1 text-white">
+                        {match[1]}
+                      </span>
+                    </>
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
+            />
           </article>
         )}
       </div>
