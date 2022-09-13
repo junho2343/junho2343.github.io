@@ -49,7 +49,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               className={markdownStyles["markdown-body"]}
               dangerouslySetInnerHTML={{ __html: post.content }}
             /> */}
-            <ReactMarkdown
+            {/* <ReactMarkdown
               children={post.content}
               rehypePlugins={[rehypeRaw]}
               remarkPlugins={[remarkGfm]}
@@ -79,7 +79,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               //     );
               //   },
               // }}
-            />
+            /> */}
           </article>
         )}
       </div>
