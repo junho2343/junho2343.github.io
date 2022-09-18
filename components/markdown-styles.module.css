@@ -46,6 +46,10 @@
   display: none !important;
 }
 
+.markdown-body u {
+  font-weight: 600;
+}
+
 .markdown-body a {
   background-color: transparent;
   color: #0969da;
@@ -106,9 +110,13 @@
 
 .markdown-body img {
   border-style: none;
-  max-width: 100%;
+  max-width: 80%;
   box-sizing: content-box;
   background-color: #ffffff;
+}
+
+.markdown-body div img {
+  max-width: 100%;
 }
 
 .markdown-body code,
@@ -260,7 +268,7 @@
 }
 
 .markdown-body h2 {
-  margin-top: 44px;
+  margin-top: 80px;
   font-weight: 600;
   padding-bottom: 0.3em;
   font-size: 1.5em;
@@ -268,7 +276,7 @@
 }
 
 .markdown-body h3 {
-  margin-top: 36px;
+  margin-top: 48px;
   font-weight: 600;
   font-size: 1.25em;
 }
@@ -801,6 +809,7 @@
 
 .markdown-body code,
 .markdown-body tt {
+  font-weight: 400;
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;

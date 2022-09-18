@@ -158,14 +158,14 @@ export default function Post({ post, morePosts, preview }: Props) {
       </div>
 
       <div
-        className="w-80 top-20 fixed hidden md:block"
+        className="w-96 top-20 fixed hidden md:block"
         style={{
           left: "calc(50% + 260px)",
         }}
       >
         {sidebarArr.map((one, index) => (
           <div
-            className="pb-1"
+            className="pb-0.5"
             key={index}
             style={{
               paddingLeft: one.depth * 20,
