@@ -146,6 +146,8 @@ export default function Post({ post, morePosts, preview }: Props) {
             />
           </article>
         )}
+
+        <Utterances />
       </div>
       <div className="absolute right-0 top-3 md:right-56">
         <a href="https://hits.seeyoufarm.com">
@@ -178,8 +180,6 @@ export default function Post({ post, morePosts, preview }: Props) {
           </div>
         ))}
       </div>
-
-      <Utterances />
     </div>
   );
 }
