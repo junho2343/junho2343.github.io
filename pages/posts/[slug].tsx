@@ -5,6 +5,7 @@ import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import React from "react";
 
 import { getPostBySlug, getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
@@ -20,8 +21,45 @@ type Props = {
   preview?: boolean;
 };
 
+type Sidebar = {
+  id: string;
+  name: string;
+  depth: number;
+};
+
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
+  const [sidebarArr, setSidebarArr] = React.useState<Sidebar[]>([]);
+
+  React.useEffect(() => {
+    const sidebarArrData = Array.from(document.querySelectorAll("h1,h2,h3"))
+      .filter((one) => one.getAttribute("id"))
+      .map((one) => ({
+        id: one.getAttribute("id"),
+        name: one.innerHTML,
+        depth: parseInt(one.tagName.slice(1, 2)),
+      }));
+
+    setSidebarArr(sidebarArrData);
+  }, []);
+
+  function flatten(text, child) {
+    return typeof child === "string"
+      ? text + child
+      : React.Children.toArray(child.props.children).reduce(flatten, text);
+  }
+
+  function HeadingRenderer(props) {
+    var children = React.Children.toArray(props.children);
+    var text = children.reduce(flatten, "");
+
+    var slug = text
+      .toLowerCase()
+      .replaceAll(/[^ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\s]/g, "")
+      .replaceAll(/\s/g, "-");
+
+    return React.createElement("h" + props.level, { id: slug }, props.children);
+  }
 
   return (
     <div className="relative">
@@ -75,17 +113,39 @@ export default function Post({ post, morePosts, preview }: Props) {
                     </code>
                   );
                 },
+                h1: HeadingRenderer,
+                h2: HeadingRenderer,
+                h3: HeadingRenderer,
               }}
             />
           </article>
         )}
       </div>
-      <div className="absolute right-0 top-3">
+      <div className="absolute right-0 top-3 md:right-56">
         <a href="https://hits.seeyoufarm.com">
           <img
             src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunho2343.github.io%2Fhit-counter%2F${post.slug}&count_bg=%230366D6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=&edge_flat=false`}
           />
         </a>
+      </div>
+
+      <div
+        className="w-80 top-20 fixed hidden md:block"
+        style={{
+          left: "calc(50% + 260px)",
+        }}
+      >
+        {sidebarArr.map((one, index) => (
+          <div
+            className="pb-1"
+            key={index}
+            style={{
+              paddingLeft: one.depth * 20,
+            }}
+          >
+            <a href={`#${one.id}`}>{one.name}</a>
+          </div>
+        ))}
       </div>
 
       <Utterances />
@@ -108,6 +168,7 @@ export async function getStaticProps({ params }: Params) {
     "ogImage",
     "coverImage",
   ]);
+
   // const content = await markdownToHtml(post.content || "");
 
   return {

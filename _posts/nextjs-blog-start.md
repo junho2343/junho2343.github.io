@@ -144,7 +144,7 @@ npm run build # next build && next export
 
 <br/>
 
-### **Github Actions로 배포 자동화**
+### Github Actions로 배포 자동화
 
 게시물을 작성할때마다 빌드하고 업로드하는 과정을 수기로 할 수 없으니 배포 자동화까지 구현해봅시다.
 
