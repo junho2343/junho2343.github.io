@@ -158,7 +158,7 @@ export default function Post({ post, morePosts, preview }: Props) {
       </div>
 
       <div
-        className="w-96 top-20 fixed hidden md:block"
+        className="w-96 top-20 fixed p-2 hidden md:block"
         style={{
           left: "calc(50% + 260px)",
         }}
