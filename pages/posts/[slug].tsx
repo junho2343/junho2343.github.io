@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -5,7 +6,6 @@ import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import React from "react";
 
 import { getPostBySlug, getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
@@ -30,18 +30,44 @@ type Sidebar = {
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
   const [sidebarArr, setSidebarArr] = React.useState<Sidebar[]>([]);
+  const [scrollNowId, setScrollNowId] = React.useState("");
+
+  let timer = null;
 
   React.useEffect(() => {
-    const sidebarArrData = Array.from(document.querySelectorAll("h1,h2,h3"))
-      .filter((one) => one.getAttribute("id"))
-      .map((one) => ({
-        id: one.getAttribute("id"),
-        name: one.innerHTML,
-        depth: parseInt(one.tagName.slice(1, 2)),
-      }));
+    window.addEventListener("scroll", scrollEvent, false);
 
-    setSidebarArr(sidebarArrData);
+    setSidebarArr(
+      Array.from(document.querySelectorAll("h1,h2,h3"))
+        .filter((one) => one.getAttribute("id"))
+        .map((one) => ({
+          id: one.getAttribute("id"),
+          name: one.innerHTML,
+          depth: parseInt(one.tagName.slice(1, 2)),
+        }))
+    );
   }, []);
+
+  function scrollEvent() {
+    if (timer !== null) clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      // do something
+
+      const target = Array.from(document.querySelectorAll("h1,h2,h3"))
+        .filter((one) => one.getAttribute("id"))
+        .reverse()
+        .find((one: HTMLElement) => {
+          if (window.scrollY > one.offsetTop) return true;
+        });
+
+      if (target) {
+        setScrollNowId(target.getAttribute("id"));
+      } else {
+        setScrollNowId("");
+      }
+    }, 150);
+  }
 
   function flatten(text, child) {
     return typeof child === "string"
@@ -143,7 +169,12 @@ export default function Post({ post, morePosts, preview }: Props) {
               paddingLeft: one.depth * 20,
             }}
           >
-            <a href={`#${one.id}`}>{one.name}</a>
+            <a
+              href={`#${one.id}`}
+              className={`${scrollNowId === one.id && "font-bold"} `}
+            >
+              {one.name}
+            </a>
           </div>
         ))}
       </div>
