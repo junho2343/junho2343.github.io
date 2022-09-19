@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://junho2343.github.io
+
+# Sitemaps
+Sitemap: https://junho2343.github.io/sitemap.xml
