@@ -41,6 +41,10 @@ const Meta = () => {
         <meta property="og:image" content="/favicon/social_preview.jpeg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <meta
+          name="google-site-verification"
+          content="UvtxWDaEi6g_ZkTZOmiWKdYOwB5WgIEEdhSJ6DWnoVc"
+        />
       </Head>
       {/* <!-- Google tag (gtag.js) --> */}
 
