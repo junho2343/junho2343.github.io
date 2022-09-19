@@ -17,6 +17,7 @@ export default function Index({ allPosts }: Props) {
       <Meta />
       <Head>
         <title>개발자 {TITLE_TAG}</title>
+        <meta name="description" content={`개발자 ${TITLE_TAG} | 블로그`} />
       </Head>
 
       <div className="flex flex-wrap">

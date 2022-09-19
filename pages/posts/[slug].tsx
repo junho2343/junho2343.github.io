@@ -100,6 +100,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 {post.title} {TITLE_TAG}
               </title>
               <meta property="og:image" content={post.ogImage.url} />
+              <meta name="description" content={post.excerpt} />
             </Head>
             <div className="pb-3">
               <h1>{post.title}</h1>
@@ -198,6 +199,7 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "ogImage",
     "coverImage",
+    "excerpt",
   ]);
 
   // const content = await markdownToHtml(post.content || "");
