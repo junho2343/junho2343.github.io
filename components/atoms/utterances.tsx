@@ -11,7 +11,7 @@ const Utterances = () => {
     script.setAttribute("repo", "junho2343/junho2343.github.io");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "blog-comment");
+    script.setAttribute("label", "댓글");
     ref.current.appendChild(script);
   }, []);
 
