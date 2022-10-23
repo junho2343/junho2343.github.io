@@ -8,7 +8,7 @@ const data: AboutType = {
   career: [
     {
       companyName: "플레이오토(PLAYAUTO)",
-      period: "2018.12 ~ 현재 (3년 8개월)",
+      period: "2018.12 ~ 2022.10 (3년 10개월)",
       href: "https://plto.com/",
       summary: [
         "EMP 솔루션 내 상품 상세 영역 리팩토링",
