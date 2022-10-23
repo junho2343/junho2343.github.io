@@ -11,14 +11,14 @@ const data: AboutType = {
       period: "2018.12 ~ 2022.10 (3년 10개월)",
       href: "https://plto.com/",
       summary: [
-        "EMP 솔루션 내 상품 상세 영역 리팩토링",
+        "쇼핑몰 통합관리 솔루션 내 상품 상세 영역 리팩토링",
         "상품 이전 웹 서비스 공통화 & 리팩토링 - 쿠팡 / 위메프 / 11번가 /올웨이즈 제공",
         {
           href: "https://marketplace.coupangcorp.com/s/blog/salenews-20210205-MCZJCYSUZLN5BAJLH2WG2GNZVXEQ",
           text: "쿠팡 상품 이전 웹 서비스 신규 개발 & 운영",
         },
 
-        "EMP 솔루션 엔진 개발",
+        "쇼핑몰 통합관리 솔루션 엔진 개발",
       ],
     },
   ],
