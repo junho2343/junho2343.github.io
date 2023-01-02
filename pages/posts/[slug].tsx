@@ -104,7 +104,7 @@ export default function Post({ post, morePosts, preview }: Props) {
             </Head>
             <div className="pb-3">
               <h1>{post.title}</h1>
-              <div className="mb-6 text-lg">{post.date}</div>
+              <div className="mt-1 mb-6 text-slate-400 ">{post.date}</div>
               <CoverImage src={post.coverImage} />
             </div>
             {/* <div
