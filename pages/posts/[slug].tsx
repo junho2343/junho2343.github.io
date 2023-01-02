@@ -90,7 +90,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   return (
     <div className="relative">
       <Meta />
-      <div className="max-w-3xl pt-14">
+      <div className="max-w-full pt-14 mx-auto">
         {router.isFallback ? (
           <>Loading…</>
         ) : (
@@ -150,7 +150,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 
         <Utterances />
       </div>
-      <div className="absolute right-0 top-3 md:right-56">
+      <div className="absolute right-0 top-3">
         <a href="https://hits.seeyoufarm.com">
           <img
             src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunho2343.github.io%2Fhit-counter%2F${post.slug}&count_bg=%230366D6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=&edge_flat=false`}
@@ -158,7 +158,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         </a>
       </div>
 
-      <div
+      {/* <div
         className="w-96 top-20 fixed p-2 hidden md:block"
         style={{
           left: "calc(50% + 260px)",
@@ -180,7 +180,7 @@ export default function Post({ post, morePosts, preview }: Props) {
             </a>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
