@@ -6,6 +6,7 @@ import { TITLE_TAG } from "lib/constants";
 import Post from "interfaces/post";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
+import { format } from "date-fns";
 
 type Props = {
   allPosts: Post[];
@@ -44,7 +45,7 @@ export default function Index({ allPosts }: Props) {
                     alt=""
                     className="mr-1 mb-0.5 w-5"
                   />
-                  {one.date}
+                  {format(new Date(one.date), "yyyy년 MM월 dd일")}
                 </p>
               </div>
             </div>

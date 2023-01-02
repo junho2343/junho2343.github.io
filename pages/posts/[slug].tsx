@@ -14,6 +14,7 @@ import markdownStyles from "components//markdown-styles.module.css";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Utterances from "components/atoms/utterances";
+import { format } from "date-fns";
 
 type Props = {
   post: PostType;
@@ -104,7 +105,9 @@ export default function Post({ post, morePosts, preview }: Props) {
             </Head>
             <div className="pb-3">
               <h1>{post.title}</h1>
-              <div className="mt-1 mb-6 text-slate-400 ">{post.date}</div>
+              <div className="mt-1 mb-6 text-slate-400 font-normal">
+                {format(new Date(post.date), "yyyy년 MM월 dd일")}
+              </div>
               <CoverImage src={post.coverImage} />
             </div>
             {/* <div
