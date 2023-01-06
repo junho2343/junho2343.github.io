@@ -22,53 +22,55 @@ type Props = {
   preview?: boolean;
 };
 
-type Sidebar = {
-  id: string;
-  name: string;
-  depth: number;
-};
+// type Sidebar = {
+//   id: string;
+//   name: string;
+//   depth: number;
+// };
 
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
-  const [sidebarArr, setSidebarArr] = React.useState<Sidebar[]>([]);
-  const [scrollNowId, setScrollNowId] = React.useState("");
+  console.log(post);
 
-  let timer = null;
+  // const [sidebarArr, setSidebarArr] = React.useState<Sidebar[]>([]);
+  // const [scrollNowId, setScrollNowId] = React.useState("");
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", scrollEvent, false);
+  // let timer = null;
 
-    setSidebarArr(
-      Array.from(document.querySelectorAll("h1,h2,h3"))
-        .filter((one) => one.getAttribute("id"))
-        .map((one) => ({
-          id: one.getAttribute("id"),
-          name: one.innerHTML,
-          depth: parseInt(one.tagName.slice(1, 2)),
-        }))
-    );
-  }, []);
+  // React.useEffect(() => {
+  //   window.addEventListener("scroll", scrollEvent, false);
 
-  function scrollEvent() {
-    if (timer !== null) clearTimeout(timer);
+  //   setSidebarArr(
+  //     Array.from(document.querySelectorAll("h1,h2,h3"))
+  //       .filter((one) => one.getAttribute("id"))
+  //       .map((one) => ({
+  //         id: one.getAttribute("id"),
+  //         name: one.innerHTML,
+  //         depth: parseInt(one.tagName.slice(1, 2)),
+  //       }))
+  //   );
+  // }, []);
 
-    timer = setTimeout(() => {
-      // do something
+  // function scrollEvent() {
+  //   if (timer !== null) clearTimeout(timer);
 
-      const target = Array.from(document.querySelectorAll("h1,h2,h3"))
-        .filter((one) => one.getAttribute("id"))
-        .reverse()
-        .find((one: HTMLElement) => {
-          if (window.scrollY > one.offsetTop) return true;
-        });
+  //   timer = setTimeout(() => {
+  //     // do something
 
-      if (target) {
-        setScrollNowId(target.getAttribute("id"));
-      } else {
-        setScrollNowId("");
-      }
-    }, 150);
-  }
+  //     const target = Array.from(document.querySelectorAll("h1,h2,h3"))
+  //       .filter((one) => one.getAttribute("id"))
+  //       .reverse()
+  //       .find((one: HTMLElement) => {
+  //         if (window.scrollY > one.offsetTop) return true;
+  //       });
+
+  //     if (target) {
+  //       setScrollNowId(target.getAttribute("id"));
+  //     } else {
+  //       setScrollNowId("");
+  //     }
+  //   }, 150);
+  // }
 
   function flatten(text, child) {
     return typeof child === "string"
@@ -148,6 +150,28 @@ export default function Post({ post, morePosts, preview }: Props) {
                 h3: HeadingRenderer,
               }}
             />
+
+            {post.reference?.length > 0 && (
+              <div className="mt-20">
+                <div className={markdownStyles["markdown-body"]}>
+                  <h2>Reference</h2>
+                  <ul>
+                    {post.reference.map((one) => (
+                      <li>
+                        {one.exposed}
+                        <ul>
+                          <li>
+                            <a href={one.url} target="_blank">
+                              {one.url}
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
           </article>
         )}
 
@@ -203,6 +227,7 @@ export async function getStaticProps({ params }: Params) {
     "ogImage",
     "coverImage",
     "excerpt",
+    "reference",
   ]);
 
   // const content = await markdownToHtml(post.content || "");

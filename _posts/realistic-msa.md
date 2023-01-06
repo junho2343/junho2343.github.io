@@ -5,7 +5,22 @@ coverImage: "/assets/blog/realistic-msa/1.webp"
 date: "2023-01-06"
 ogImage:
   url: "/assets/blog/realistic-msa/1.webp"
-Reference: 1
+reference: [
+{exposed: "회원시스템 이벤트기반 아키텍처 구축하기", url: "https://techblog.woowahan.com/7835/"},
+{exposed: "이모티콘 서비스는 왜 MSA를 선택했나?", url: "https://tech.kakao.com/2021/09/14/msa/"},
+{exposed: "오늘의집 MSA Phase 1. 전환전략", url: "https://www.bucketplace.com/post/2021-11-19-오늘의집-msa-여정-part-1-시작/"},
+{exposed: "LG CNS 기술블로그 DX Lounge에서 최신 IT 소식을 만나보세요!", url: "https://www.lgcns.com/blog/cns-tech/36171/"},
+{exposed: "오버 엔지니어링과 기술 부채", url: "https://seokjun.kim/over-engineering-vs-techincal-debt/"},
+{exposed: "DDD와 MSA 기반으로 좋은 서비스 개발하기", url: "https://helloworld.kurly.com/blog/ddd-msa-service-development/"},
+{exposed: "[MSA] Asynchronous Backing Service", url: "https://waspro.tistory.com/435"},
+{exposed: "Competing Consumers pattern", url: "https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers"},
+{exposed: "How Event-Driven Architectures Benefit from Stream Processing", url: "https://pandio.com/event-streams-queues/"},
+{exposed: "What is event-driven architecture (EDA)?", url: "https://aws.amazon.com/what-is/eda/"},
+{exposed: "Event-driven architecture", url: "https://en.wikipedia.org/wiki/Event-driven_architecture"},
+{exposed: "Event-Driven Microservice Architecture", url: "https://medium.com/trendyol-tech/event-driven-microservice-architecture-91f80ceaa21e"},
+{exposed: "Event-driven architectures", url: "https://cloud.google.com/eventarc/docs/event-driven-architectures"},
+{exposed: "Event-driven architecture with Pub/Sub", url: "https://cloud.google.com/solutions/event-driven-architecture-pubsub"}
+]
 ---
 
 > MSA에 대해 드는 저의 주관적인 생각을 정리한 내용입니다. MSA 도입을 고민 중인 분들에게 도움이 되었으면 합니다.
@@ -90,37 +105,3 @@ MSA와 함께 언급되는 `EDA`(Event Driven Architecture)는 이러한 느슨�
 ## 결론
 
 전달하고자 했던 내용은 마이크로서비스로의 전환이 현재 인력/기술에서 오버엔지니어링인지 확인한 후 점진적으로 전환을 이어갔으면 하는 내용입니다. 또한 MSA의 핵심은 결합을 최대한 느슨하게 가져가며 명확한 경계를 가져야 장점을 잘 발휘할 수 있는 것 같습니다.
-
-한글
-
-- \***\*회원시스템 이벤트기반 아키텍처 구축하기\*\***
-  - [https://techblog.woowahan.com/7835/](https://techblog.woowahan.com/7835/)
-- \***\*이모티콘 서비스는 왜 MSA를 선택했나?\*\***
-  - [https://tech.kakao.com/2021/09/14/msa/](https://tech.kakao.com/2021/09/14/msa/)
-- \***\*오늘의집 MSA Phase 1. 전환전략\*\***
-  - [https://www.bucketplace.com/post/2021-11-19-오늘의집-msa-여정-part-1-시작/](https://www.bucketplace.com/post/2021-11-19-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-msa-%EC%97%AC%EC%A0%95-part-1-%EC%8B%9C%EC%9E%91/)
-- \***\*LG CNS 기술블로그 DX Lounge에서 최신 IT 소식을 만나보세요!\*\***
-  - [https://www.lgcns.com/blog/cns-tech/36171/](https://www.lgcns.com/blog/cns-tech/36171/)
-- \***\*오버 엔지니어링과 기술 부채\*\***
-  - [https://seokjun.kim/over-engineering-vs-techincal-debt/](https://seokjun.kim/over-engineering-vs-techincal-debt/)
-- \***\*DDD와 MSA 기반으로 좋은 서비스 개발하기\*\***
-  - [https://helloworld.kurly.com/blog/ddd-msa-service-development/](https://helloworld.kurly.com/blog/ddd-msa-service-development/)
-- \***\*[[MSA] Asynchronous Backing Service](https://waspro.tistory.com/435)\*\***
-  - [https://waspro.tistory.com/435](https://waspro.tistory.com/435)
-
-영문
-
-- \***\*Competing Consumers pattern\*\***
-  [https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers](https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers)
-- \***\*How Event-Driven Architectures Benefit from Stream Processing\*\***
-  - [https://pandio.com/event-streams-queues/](https://pandio.com/event-streams-queues/)
-- \***\*What is event-driven architecture (EDA)?\*\***
-  - [https://aws.amazon.com/what-is/eda/](https://aws.amazon.com/what-is/eda/)
-- **Event-driven architecture**
-  - [https://en.wikipedia.org/wiki/Event-driven_architecture](https://en.wikipedia.org/wiki/Event-driven_architecture)
-- \***\*Event-Driven Microservice Architecture\*\***
-  - [https://medium.com/trendyol-tech/event-driven-microservice-architecture-91f80ceaa21e](https://medium.com/trendyol-tech/event-driven-microservice-architecture-91f80ceaa21e)
-- **Event-driven architectures**
-  - [https://cloud.google.com/eventarc/docs/event-driven-architectures](https://cloud.google.com/eventarc/docs/event-driven-architectures)
-- **Event-driven architecture with Pub/Sub**
-  - [https://cloud.google.com/solutions/event-driven-architecture-pubsub](https://cloud.google.com/solutions/event-driven-architecture-pubsub)

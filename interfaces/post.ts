@@ -8,6 +8,10 @@ type PostType = {
     url: string;
   };
   content: string;
+  reference: {
+    exposed: string;
+    url: string;
+  }[];
 };
 
 export default PostType;
