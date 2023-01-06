@@ -3,8 +3,7 @@ title: "현실적인 MSA에 대해"
 excerpt: "MSA에 대해 드는 저의 주관적인 생각을 정리한 내용입니다. MSA 도입을 고민 중인 분들에게 도움이 되었으면 합니다."
 coverImage: "/assets/blog/realistic-msa/1.webp"
 date: "2023-01-06"
-ogImage:
-  url: "/assets/blog/realistic-msa/1.webp"
+tag: ["아키텍처", "MSA"]
 reference: [
 {exposed: "회원시스템 이벤트기반 아키텍처 구축하기", url: "https://techblog.woowahan.com/7835/"},
 {exposed: "이모티콘 서비스는 왜 MSA를 선택했나?", url: "https://tech.kakao.com/2021/09/14/msa/"},

@@ -36,17 +36,26 @@ export default function Index({ allPosts }: Props) {
             >
               <CoverImage src={one.coverImage} />
 
-              <div className="p-3">
-                <h3 className="h-14 line-clamp-2 mb-2">{one.title}</h3>
-                <p className="h-16 line-clamp-3 text-sm">{one.excerpt}</p>
-                <p className="pt-3 flex items-center">
-                  <img
-                    src="/assets/icon_time.svg"
-                    alt=""
-                    className="mr-1 mb-0.5 w-5"
-                  />
-                  {format(new Date(one.date), "yyyy년 MM월 dd일")}
-                </p>
+              <div className="h-44 p-3 relative">
+                <h4 className="line-clamp-2 mb-2 text-lg font-normal">
+                  {one.title}
+                </h4>
+                <p className="line-clamp-3 text-sm">{one.excerpt}</p>
+
+                <div className="absolute bottom-3">
+                  <span className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal">
+                    {one.date}
+                  </span>
+
+                  {one.tag?.map((one, index) => (
+                    <span
+                      className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal"
+                      key={index}
+                    >
+                      #{one}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </Link>
@@ -63,6 +72,7 @@ export const getStaticProps = async () => {
     "slug",
     "coverImage",
     "excerpt",
+    "tag",
   ]);
 
   return {

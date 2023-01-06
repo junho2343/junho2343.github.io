@@ -6,6 +6,7 @@ import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import { format } from "date-fns";
 
 import { getPostBySlug, getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
@@ -14,7 +15,6 @@ import markdownStyles from "components//markdown-styles.module.css";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Utterances from "components/atoms/utterances";
-import { format } from "date-fns";
 
 type Props = {
   post: PostType;
@@ -30,7 +30,6 @@ type Props = {
 
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
-  console.log(post);
 
   // const [sidebarArr, setSidebarArr] = React.useState<Sidebar[]>([]);
   // const [scrollNowId, setScrollNowId] = React.useState("");
@@ -91,9 +90,9 @@ export default function Post({ post, morePosts, preview }: Props) {
   }
 
   return (
-    <div className="relative">
+    <div className="">
       <Meta />
-      <div className="max-w-full pt-14 mx-auto">
+      <div className="max-w-2xl pt-14 mx-auto relative">
         {router.isFallback ? (
           <>Loading…</>
         ) : (
@@ -102,13 +101,23 @@ export default function Post({ post, morePosts, preview }: Props) {
               <title>
                 {post.title} {TITLE_TAG}
               </title>
-              <meta property="og:image" content={post.ogImage.url} />
+              <meta property="og:image" content={post.coverImage} />
               <meta name="description" content={post.excerpt} />
             </Head>
             <div className="pb-3">
               <h1>{post.title}</h1>
-              <div className="mt-1 mb-6 text-slate-400 font-normal">
-                {format(new Date(post.date), "yyyy년 MM월 dd일")}
+              <div className="mt-1 mb-6">
+                <span className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal">
+                  {post.date}
+                </span>
+                {post.tag?.map((one, index) => (
+                  <span
+                    className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal"
+                    key={index}
+                  >
+                    #{one}
+                  </span>
+                ))}
               </div>
               <CoverImage src={post.coverImage} />
             </div>
@@ -156,8 +165,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <div className={markdownStyles["markdown-body"]}>
                   <h2>Reference</h2>
                   <ul>
-                    {post.reference.map((one) => (
-                      <li>
+                    {post.reference.map((one, index) => (
+                      <li key={index}>
                         {one.exposed}
                         <ul>
                           <li>
@@ -176,13 +185,14 @@ export default function Post({ post, morePosts, preview }: Props) {
         )}
 
         <Utterances />
-      </div>
-      <div className="absolute right-0 top-3">
-        <a href="https://hits.seeyoufarm.com">
-          <img
-            src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunho2343.github.io%2Fhit-counter%2F${post.slug}&count_bg=%230366D6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=&edge_flat=false`}
-          />
-        </a>
+
+        <div className="absolute right-0 top-3">
+          <a href="https://hits.seeyoufarm.com">
+            <img
+              src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunho2343.github.io%2Fhit-counter%2F${post.slug}&count_bg=%230366D6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=&edge_flat=false`}
+            />
+          </a>
+        </div>
       </div>
 
       {/* <div
@@ -224,10 +234,10 @@ export async function getStaticProps({ params }: Params) {
     "date",
     "slug",
     "content",
-    "ogImage",
     "coverImage",
     "excerpt",
     "reference",
+    "tag",
   ]);
 
   // const content = await markdownToHtml(post.content || "");
