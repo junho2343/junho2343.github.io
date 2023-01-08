@@ -5,8 +5,7 @@
 @layer base {
   * {
     @apply font-[300];
-
-    font-family: "Lato", sans-serif;
+    font-family: Pretendard;
     letter-spacing: 0.5px;
     /* box-sizing: border-box; */
   }
