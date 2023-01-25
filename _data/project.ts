@@ -9,7 +9,7 @@ const projectData = [
     people: 1,
     href: "https://marketplace.coupangcorp.com/s/blog/salenews-20210205-MCZJCYSUZLN5BAJLH2WG2GNZVXEQ",
     content: `최소한의 정보를 입력하여 타 마켓에서 판매중인 상품을 쿠팡 Wing 으로 쉽게 이전할 수 있는 웹 서비스를 쿠팡에 제공<br/>
-              메시징 시스템을 이용한 비동기 방식의 데이터 처리 시스템을 구축하여 고가용성을 갖춘 서비스 설계<br/><br/>
+              타 마켓에서 [API/스크랩핑]을 통해 상품정보를 수집한 뒤 가공하여 쿠팡에 전달<br/><br/>
 
               누적 이전 상품 수 : 71,133,478 / 누적 신규 사용자 수 67,006 - 2022.03.23 기준
                   `,
@@ -29,6 +29,7 @@ const projectData = [
           content: [
             "AWS SNS, SQS를 이용하여 비동기 방식의 데이터 처리 시스템 구축",
             "영구히 저장할 필요 없는 데이터의 많은 I/O를 감당하기 위해 REDIS 사용",
+
             "작업 조회/통계 어드민 개발 - 크론을 통해 통계 데이터 주기적 계산",
             "AWS ECR, ECS, Docker 를 통한 분산 서버 환경, 무중단 배포 구현",
           ],
@@ -122,7 +123,7 @@ const projectData = [
   {
     name: "솔루션 내 상품상세 영역 서비스 분리 및 리팩토링",
     company: aboutData.career[0].companyName,
-    period: "2022.05 ~ 2022.07",
+    period: "2022.05 ~ 2022.08",
     people: 3,
     content: `
       c#, PHP 기반 솔루션 내 상품상세 영역 속도 개선 및 불편사항 해결을 위해 독립적인 서비스 분리 및 리팩토링<br/>
