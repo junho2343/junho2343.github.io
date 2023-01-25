@@ -1,3 +1,5 @@
+import React from "react";
+
 import Footer from "components/layout/footer";
 import Container from "components/layout/container";
 import Header from "components/layout/header";

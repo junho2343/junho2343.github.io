@@ -16,10 +16,8 @@ export default function Document() {
         /> */}
       </Head>
       <body>
-        <Layout>
-          <Main />
-          <NextScript />
-        </Layout>
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );
