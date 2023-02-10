@@ -36,7 +36,6 @@ http 요청에 따른 응답 전문과 실행되는 영역을 가지고 가볍�
 - 이를 Client(브라우저)에서 렌더링하여 콘텐츠가 사용자에게 노출됨
 
 ![CSR - http 요청에 대한 응답 전문](/assets/blog/nextjs-blog-start/1.png)
-CSR - http 요청에 대한 응답 전문
 
 ### SSR - Server Side Rendering
 
@@ -45,14 +44,11 @@ CSR - http 요청에 대한 응답 전문
 
 ![SSR - http 요청에 대한 응답 전문](/assets/blog/nextjs-blog-start/2.png)
 
-SSR - http 요청에 대한 응답 전문
-
 ### SSG - Static Site Generator
 
 - http 요청 시 이미 만들어진 완성된 html을 응답
 
 ![SSG - http 요청에 대한 응답 전문 (SSR 응답과 동일)](/assets/blog/nextjs-blog-start/3.png)
-SSG - http 요청에 대한 응답 전문 (SSR 응답과 동일)
 
 <br/>
 
@@ -139,7 +135,7 @@ npm run build # next build && next export
 
 이러면 `https://[자신의 GitHubID].github.io` 접근 시 페이지가 정상 노출되어야 합니다!
 
-![스크린샷 2022-09-11 오후 10.15.35.png](/assets/blog/nextjs-blog-start/4.png)
+![](/assets/blog/nextjs-blog-start/4.png)
 
 <br/>
 
@@ -167,7 +163,7 @@ npm run build # next build && next export
 
 마지막으로 GitHub Pages의 기본 호스팅 브랜치를 gh-pages 로 변경해줍시다.
 
-![스크린샷 2022-09-11 오후 10.37.00.png](/assets/blog/nextjs-blog-start/5.png)
+![](/assets/blog/nextjs-blog-start/5.png)
 
 이로써 대략적인 블로그 기능들은 추가가 완료된 것 같습니다.
 

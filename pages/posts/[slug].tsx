@@ -157,6 +157,15 @@ export default function Post({ post, morePosts, preview }: Props) {
                 h1: HeadingRenderer,
                 h2: HeadingRenderer,
                 h3: HeadingRenderer,
+                img({ src, alt }) {
+                  return (
+                    <>
+                      <img src={src} alt={alt} />
+                      <span>{alt}</span>
+                    </>
+                  );
+                },
+                aside: "blockquote",
               }}
             />
 

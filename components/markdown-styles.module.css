@@ -115,6 +115,14 @@
   background-color: #ffffff;
 }
 
+.markdown-body img + span {
+  display: block;
+  padding-top: 5px;
+  color: rgb(132, 132, 132);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
 .markdown-body div img {
   max-width: 100%;
 }
@@ -813,8 +821,9 @@
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(175, 184, 193, 0.2);
+  background-color: #ededeb;
   border-radius: 6px;
+  color: #eb5c5b;
 }
 
 .markdown-body code br,
@@ -828,6 +837,7 @@
 
 .markdown-body pre code {
   font-size: 100%;
+  color: #abb2bf;
 }
 
 .markdown-body pre > code {
