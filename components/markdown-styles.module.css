@@ -328,6 +328,9 @@
   margin-bottom: 0;
   padding-left: 2em;
 }
+.markdown-body > ul {
+  padding-left: 1em;
+}
 
 .markdown-body ol ol,
 .markdown-body ul ol {
