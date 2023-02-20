@@ -355,6 +355,10 @@
   font-size: 12px;
 }
 
+.markdown-body code * {
+  font-family: inherit;
+}
+
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
