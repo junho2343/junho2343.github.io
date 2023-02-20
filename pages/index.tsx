@@ -36,20 +36,20 @@ export default function Index({ allPosts }: Props) {
             >
               <CoverImage src={one.coverImage} />
 
-              <div className="h-44 p-3 relative">
+              <div className="h-[184px] p-3 relative">
                 <h4 className="line-clamp-2 mb-2 text-lg font-normal">
                   {one.title}
                 </h4>
                 <p className="line-clamp-3 text-sm">{one.excerpt}</p>
 
-                <div className="absolute bottom-3">
-                  <span className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal">
+                <div className="absolute bottom-3 flex flex-wrap">
+                  <span className="bg-slate-100 p-1.5 mr-1 mt-1 rounded text-xs font-normal">
                     {one.date}
                   </span>
 
                   {one.tag?.map((one, index) => (
                     <span
-                      className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal"
+                      className="bg-slate-100 p-1.5 mr-1 mt-1 rounded text-xs font-normal"
                       key={index}
                     >
                       #{one}
