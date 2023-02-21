@@ -29,11 +29,6 @@ const About = () => {
             <a href={one.href} target="_blank">
               <strong>{one.companyName}</strong> | {one.period}
             </a>
-            <ul>
-              {one.summary.map((one, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: one }}></li>
-              ))}
-            </ul>
           </li>
         ))}
       </ul>
