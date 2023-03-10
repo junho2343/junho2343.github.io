@@ -115,7 +115,7 @@ reference: [
 
 `Out Adapter` 영역의 `UserRepository`에서는 실제로 데이터베이스와 상호작용하며, `Mapper`를 통해 데이터를 변환합니다.
 
-![스크린샷 2023-03-10 오후 2.50.31.png](</assets/blog/clean-architecture(hexagonal-architecture)-with-nestjs/9.png>)
+![/src/modules/user/user.mapper.ts](</assets/blog/clean-architecture(hexagonal-architecture)-with-nestjs/9.png>)
 
 여기서 `Mapper`의 역할은 분리된 도메인 모델이 여러 테이블과 연관이 있을 수 있고, 데이터 자체도 다를 수 있으므로
 
