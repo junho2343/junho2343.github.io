@@ -21,13 +21,13 @@ const About = () => {
         개발자입니다.
       </p> */}
       <p className="pt-3">
-        TypeScript, Node.js, NestJS, React 를 주로 사용하며 AWS 를 활용한
-        아키텍처 설계에 관심을 가지고 있습니다.
+        TypeScript, Node.js, NestJS를 주로 사용하며 AWS 를 활용한 아키텍처
+        설계에 관심을 가지고 있습니다.
       </p>
       <div className="bg-zinc-100 mt-3 p-4 rounded-md text-[0.95rem] text-zinc-800">
         <p>
           3년 동안 레거시 서비스 유지보수/리팩토링과 신규서비스 개발의 경험을
-          가진 풀스택 개발자입니다.
+          가진 개발자입니다.
         </p>
         <p className="pt-3">
           약 900건의 기능 개발/유지보수 업무를 처리하며 항상 사이드 이펙트를
