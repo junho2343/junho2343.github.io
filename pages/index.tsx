@@ -39,7 +39,7 @@ export default function Index({ allPosts, allTags }: Props) {
         <meta name="description" content={`개발자 ${TITLE_TAG} | 블로그`} />
       </Head>
 
-      <div className="pt-4">
+      <div className="flex flex-wrap pt-4">
         {allTags.map((tag, index) => (
           <Tag
             tagName={`${tag[0]} ${tag[1]}`}
