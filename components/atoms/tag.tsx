@@ -1,6 +1,6 @@
 type Props = {
   tagName: string;
-  onClick: React.MouseEventHandler<HTMLSpanElement>;
+  onClick?: React.MouseEventHandler<HTMLSpanElement>;
   selected?: boolean;
   hover?: boolean;
 };

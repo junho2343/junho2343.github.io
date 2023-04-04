@@ -18,8 +18,10 @@ type Props = {
 export default function Index({ allPosts, allTags }: Props) {
   const router = useRouter();
 
-  const [selectedTag, setSelectedTag] = React.useState(
-    router.query.tag || "전체"
+  const [selectedTag, setSelectedTag] = React.useState<string>(
+    router.query.tag && !Array.isArray(router.query.tag)
+      ? router.query.tag
+      : "전체"
   );
 
   return (
