@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router";
 
 import { getAllPosts } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
@@ -8,7 +9,6 @@ import Post from "interfaces/post";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Tag from "components/atoms/tag";
-import { useRouter } from "next/router";
 
 type Props = {
   allPosts: Post[];
@@ -18,10 +18,17 @@ type Props = {
 export default function Index({ allPosts, allTags }: Props) {
   const router = useRouter();
 
+  React.useEffect(() => {
+    router.isReady && setSelectedTag(router.query.tag?.toString() || "전체");
+  }, [router.query.tag]);
+
+  const tagQueryValue = decodeURI(
+    router.query.tag?.toString() ||
+      router.asPath.match(new RegExp(`[&?]tag=(.*)(&|$)`))?.[1]
+  );
+
   const [selectedTag, setSelectedTag] = React.useState<string>(
-    router.query.tag && !Array.isArray(router.query.tag)
-      ? router.query.tag
-      : "전체"
+    tagQueryValue || "전체"
   );
 
   return (
@@ -38,8 +45,11 @@ export default function Index({ allPosts, allTags }: Props) {
             tagName={`${tag[0]} ${tag[1]}`}
             onClick={() => {
               setSelectedTag(tag[0]);
-              router.query.tag = tag[0];
-              router.push(router);
+
+              router.push({
+                pathname: "/",
+                query: { tag: tag[0] },
+              });
             }}
             selected={tag[0] === selectedTag}
             hover

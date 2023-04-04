@@ -32,13 +32,18 @@ const Header = () => {
                 href: "/",
               },
             ]
-        ).map((one) =>
+        ).map((one, index) =>
           one.href.startsWith("http") ? (
-            <a href={one.href} target="_blank" className="pr-4 font-[400]">
+            <a
+              href={one.href}
+              target="_blank"
+              className="pr-4 font-[400]"
+              key={index}
+            >
               {one.name}
             </a>
           ) : (
-            <Link href={one.href}>
+            <Link href={one.href} key={index}>
               <a className="pr-4 font-[400]">{one.name}</a>
             </Link>
           )
