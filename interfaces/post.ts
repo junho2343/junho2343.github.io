@@ -5,7 +5,7 @@ type PostType = {
   coverImage: string;
   excerpt: string;
   content: string;
-  tag: string[];
+  tags: string[];
   reference: {
     exposed: string;
     url: string;

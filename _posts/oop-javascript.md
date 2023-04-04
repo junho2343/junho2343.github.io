@@ -3,7 +3,7 @@ title: "객체지향 JavaScript 이론"
 excerpt: "객체지향 프로그래밍의 이론과 궁극적인 목표에 대해 정리한 내용입니다."
 coverImage: "/assets/blog/oop-javascript/cover.png"
 date: "2023-02-20"
-tag: ["JavaScript", "OOP", "코드스피츠"]
+tags: ["JavaScript", "OOP", "코드스피츠"]
 reference: [
 {exposed: "코드스피츠 86 객체지향 자바스크립트 - 1회차", url: "https://www.youtube.com/watch?v=E9NZ0YEZrYU"}
 ]

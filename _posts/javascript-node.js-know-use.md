@@ -3,7 +3,7 @@ title: "JavaScript / Node.js 잘 알고 사용하기"
 excerpt: "JavaScript / Node.js의 동작 원리를 통해 코드의 흐름이 어떤 방식으로 진행되며, Single Thread, Event Loop, Non-Blocking I/O에 대해 알고 확장성 있는 애플리케이션을 만들기 위해 어떤 부분을 조심해야 하는지 알아봅시다."
 coverImage: "/assets/blog/javascript-node.js-know-use/cover.jpeg"
 date: "2023-02-10"
-tag: ["JavaScript", "Node.js"]
+tags: ["JavaScript", "Node.js"]
 reference: [
 {exposed: "어쨌든 이벤트 루프는 무엇입니까? | Philip Roberts | JSConf EU", url: "https://www.youtube.com/watch?v=8aGhZQkoFbQ"},
 {exposed: "Don't Block the Event Loop (or the Worker Pool)", url: "https://nodejs.org/en/docs/guides/dont-block-the-event-loop/"},

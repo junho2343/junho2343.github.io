@@ -15,6 +15,7 @@ import markdownStyles from "components//markdown-styles.module.css";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Utterances from "components/atoms/utterances";
+import Tag from "components/atoms/tag";
 
 type Props = {
   post: PostType;
@@ -110,13 +111,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <span className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal">
                   {post.date}
                 </span>
-                {post.tag?.map((one, index) => (
-                  <span
-                    className="bg-slate-100 p-1.5 mr-1 rounded text-xs font-normal"
-                    key={index}
-                  >
-                    #{one}
-                  </span>
+                {post.tags?.map((one, index) => (
+                  <Tag tagName={one} key={index} />
                 ))}
               </div>
               <CoverImage src={post.coverImage} />
@@ -246,7 +242,7 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
     "excerpt",
     "reference",
-    "tag",
+    "tags",
   ]);
 
   // const content = await markdownToHtml(post.content || "");

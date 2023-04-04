@@ -12,6 +12,7 @@ module.exports = {
 
         postText: "#545468",
         primary: "#0366d6",
+        secondary: "#3584de",
       },
       spacing: {
         28: "7rem",

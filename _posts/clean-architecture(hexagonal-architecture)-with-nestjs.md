@@ -3,7 +3,7 @@ title: "클린 아키텍처(헥사고날 아키텍처) 알아보기 | with NestJ
 excerpt: "아키텍처 패턴 중 하나이기에 주관적이며 애매합니다. 이런 애매한 부분들을 추구하는 원칙에 벗어나지 않는 선에서, 저만의 기준을 세워 정리하고 구현하였음을 참고해 주세요."
 coverImage: "/assets/blog/clean-architecture(hexagonal-architecture)-with-nestjs/2.png"
 date: "2023-03-10"
-tag: ["아키텍처","NestJS"]
+tags: ["아키텍처","NestJS"]
 reference: [
 {exposed: "[KSUG Seminar] Growing Application - 2nd. 애플리케이션 아키텍처와 객체지향", url: "https://www.youtube.com/watch?v=26S4VFUWlJM"},
 {exposed: "[NHN FORWARD 22] 클린 아키텍처 애매한 부분 정해 드립니다.", url: "https://www.youtube.com/watch?v=g6Tg6_qpIVc"},
