@@ -22,10 +22,9 @@ export default function Index({ allPosts, allTags }: Props) {
     router.isReady && setSelectedTag(router.query.tag?.toString() || "전체");
   }, [router.query.tag]);
 
-  const tagQueryValue = decodeURI(
+  const tagQueryValue =
     router.query.tag?.toString() ||
-      router.asPath.match(new RegExp(`[&?]tag=(.*)(&|$)`))?.[1]
-  );
+    decodeURI(router.asPath.match(new RegExp(`[&?]tag=(.*)(&|$)`))?.[1] || "");
 
   const [selectedTag, setSelectedTag] = React.useState<string>(
     tagQueryValue || "전체"
