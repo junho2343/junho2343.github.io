@@ -2,8 +2,10 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import PostType from "interfaces/post";
+import galleryImageData from "_data/gallery";
 
 const postsDirectory = join(process.cwd(), "_posts");
+const galleryDirectory = join(process.cwd(), "public/assets/gallery");
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -46,4 +48,20 @@ export function getAllPosts(fields: string[] = []) {
       new Date(post1.date) > new Date(post2.date) ? -1 : 1
     );
   return posts;
+}
+
+export function getAllGalleryImages() {
+  const galleryImages = fs.readdirSync(galleryDirectory);
+
+  return galleryImages
+    .map((image) => {
+      const matchImage = galleryImageData.find(
+        (imageData) => imageData.imageName === image
+      );
+
+      return matchImage
+        ? { imageName: image, tags: matchImage.tags, date: matchImage.date }
+        : { imageName: image, tags: [], date: "2000-10-15" };
+    })
+    .sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 }

@@ -3,10 +3,11 @@ import Head from "next/head";
 import { TITLE_TAG } from "lib/constants";
 import Meta from "components/meta";
 import aboutData from "_data/about";
+import Container from "components/layout/container";
 
 const About = () => {
   return (
-    <>
+    <Container>
       <Meta />
       <Head>
         <title>About Me {TITLE_TAG}</title>
@@ -38,7 +39,7 @@ const About = () => {
       {/* <Head>
     <title>Next.js Blog Example with {CMS_NAME}</title>
   </Head> */}
-    </>
+    </Container>
   );
 };
 

@@ -16,6 +16,7 @@ import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Utterances from "components/atoms/utterances";
 import Tag from "components/atoms/tag";
+import Container from "components/layout/container";
 
 type Props = {
   post: PostType;
@@ -91,7 +92,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   }
 
   return (
-    <div className="">
+    <Container>
       <Meta />
       <div className="max-w-2xl pt-14 mx-auto relative">
         {router.isFallback ? (
@@ -223,7 +224,7 @@ export default function Post({ post, morePosts, preview }: Props) {
           </div>
         ))}
       </div> */}
-    </div>
+    </Container>
   );
 }
 

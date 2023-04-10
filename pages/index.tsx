@@ -9,6 +9,7 @@ import Post from "interfaces/post";
 import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Tag from "components/atoms/tag";
+import Container from "components/layout/container";
 
 type Props = {
   allPosts: Post[];
@@ -31,7 +32,7 @@ export default function Index({ allPosts, allTags }: Props) {
   );
 
   return (
-    <>
+    <Container>
       <Meta />
       <Head>
         <title>개발자 {TITLE_TAG}</title>
@@ -96,7 +97,7 @@ export default function Index({ allPosts, allTags }: Props) {
             </Link>
           ))}
       </div>
-    </>
+    </Container>
   );
 }
 

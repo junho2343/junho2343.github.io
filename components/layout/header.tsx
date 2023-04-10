@@ -31,6 +31,10 @@ const Header = () => {
                 name: "Posts",
                 href: "/",
               },
+              {
+                name: "Gallery",
+                href: "/gallery",
+              },
             ]
         ).map((one, index) =>
           one.href.startsWith("http") ? (
