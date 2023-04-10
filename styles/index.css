@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Pretendard";
-  src: url("/assets/font/PretendardVariable.woff2");
+  src: url("https://cdn.jsdelivr.net/gh/junho2343/junho2343.github.io/public/assets/font/PretendardVariable.woff2");
 }
 @layer base {
   * {
