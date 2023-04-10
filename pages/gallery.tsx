@@ -45,6 +45,12 @@ export default function Gallery({ allGalleryImages }: Props) {
                       #{tag}
                     </span>
                   ))}
+                  <span
+                    className="text-white absolute bottom-3 right-4"
+                    key={index}
+                  >
+                    {image.date}
+                  </span>
                 </div>
               )}
             </div>
