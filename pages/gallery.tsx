@@ -39,6 +39,7 @@ export default function Gallery({ allGalleryImages }: Props) {
                   alt="Junho Gallery Image"
                   layout="fill"
                   placeholder="blur"
+                  unoptimized
                   blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnt2PQAF5AJMrzp1XwAAAABJRU5ErkJggg=="
                   // blurDataURL={`/assets/gallery/${image.imageName}`}
                 />
