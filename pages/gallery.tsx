@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 
 import { getAllGalleryImages } from "lib/api";
@@ -32,12 +33,16 @@ export default function Gallery({ allGalleryImages }: Props) {
                 setClickImage(index);
               }}
             >
-              <img
-                src={`/assets/gallery/${image.imageName}`}
-                alt=""
-                className="w-full"
-              />
-
+              <div className="galleryImage">
+                <Image
+                  src={`/assets/gallery/${image.imageName}`}
+                  alt="Junho Gallery Image"
+                  layout="fill"
+                  placeholder="blur"
+                  blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnt2PQAF5AJMrzp1XwAAAABJRU5ErkJggg=="
+                  // blurDataURL={`/assets/gallery/${image.imageName}`}
+                />
+              </div>
               {clickImage === index && (
                 <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] justify-center items-center flex">
                   {image.tags.map((tag, index) => (

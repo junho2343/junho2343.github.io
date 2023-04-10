@@ -40,4 +40,16 @@
   }
 
   /* ... */
+
+  .galleryImage {
+    width: 100%;
+  }
+  .galleryImage > span {
+    position: unset !important;
+  }
+  .galleryImage > span > img {
+    object-fit: contain !important;
+    position: relative !important;
+    height: auto !important;
+  }
 }
