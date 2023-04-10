@@ -46,7 +46,7 @@ export default function Gallery({ allGalleryImages }: Props) {
                     </span>
                   ))}
                   <span
-                    className="text-white absolute bottom-3 right-4"
+                    className="text-white absolute bottom-3 right-4 text-sm"
                     key={index}
                   >
                     {image.date}
