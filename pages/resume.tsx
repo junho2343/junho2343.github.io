@@ -6,10 +6,11 @@ import aboutData from "_data/about";
 import projectData from "_data/project";
 import React from "react";
 import iconData from "_data/icon";
+import Container from "components/layout/container";
 
 const About = () => {
   return (
-    <>
+    <Container>
       <Meta />
       <Head>
         <title>Resume {TITLE_TAG}</title>
@@ -148,7 +149,7 @@ const About = () => {
           </ul>
         </div>
       ))}
-    </>
+    </Container>
   );
 };
 
