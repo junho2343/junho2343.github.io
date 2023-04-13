@@ -41,7 +41,7 @@ export default function Gallery({ allGalleryImages }: Props) {
                   placeholder="blur"
                   unoptimized
                   blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnt2PQAF5AJMrzp1XwAAAABJRU5ErkJggg=="
-                  // blurDataURL={`/assets/gallery/${image.imageName}`}
+                  loading="eager"
                 />
               </div>
               {clickImage === index && (
