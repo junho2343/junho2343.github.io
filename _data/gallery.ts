@@ -12,7 +12,7 @@ const galleryImageData = [
   {
     imageName: "IMG_7399 2.jpg",
     date: "2022-12-24",
-    tags: ["일본", "훗카이도", "비에이", "세븐스타나무"],
+    tags: ["일본", "훗카이도", "비에이", "자작나무길"],
   },
 
   {
@@ -36,7 +36,7 @@ const galleryImageData = [
   {
     imageName: "IMG_1010.JPG",
     date: "2022-12-24",
-    tags: ["일본", "훗카이도", "비에이", "크리스마스트리"],
+    tags: ["일본", "훗카이도", "비에이", "크리스마스나무"],
   },
 
   {
@@ -47,7 +47,17 @@ const galleryImageData = [
   {
     imageName: "IMG_1575.JPG",
     date: "2022-12-24",
-    tags: ["일본", "훗카이도", "비에이"],
+    tags: ["일본", "훗카이도", "후라노", "닝구르테라스"],
+  },
+  {
+    imageName: "IMG_1477.JPG",
+    date: "2022-12-24",
+    tags: ["일본", "훗카이도", "후라노", "닝구르테라스"],
+  },
+  {
+    imageName: "IMG_1569.JPG",
+    date: "2022-12-24",
+    tags: ["일본", "훗카이도", "후라노", "닝구르테라스"],
   },
   {
     imageName: "IMG_2456.JPG",

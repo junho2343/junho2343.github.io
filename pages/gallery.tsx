@@ -21,8 +21,8 @@ export default function Gallery({ allGalleryImages }: Props) {
     <Container className="max-w-[1600px]">
       <Meta />
       <Head>
-        <title>개발자 {TITLE_TAG}</title>
-        <meta name="description" content={`개발자 ${TITLE_TAG} | 블로그`} />
+        <title>갤러리 {TITLE_TAG}</title>
+        <meta name="description" content={`갤러리 ${TITLE_TAG}`} />
       </Head>
       <div className="columns-[320px] gap-0">
         {allGalleryImages.map((image, index) => (
