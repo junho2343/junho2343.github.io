@@ -35,7 +35,8 @@ export default function Gallery({ allGalleryImages }: Props) {
             >
               <div className="galleryImage">
                 <Image
-                  src={`https://cdn.jsdelivr.net/gh/junho2343/junho2343.github.io/public/assets/gallery/${image.imageName}`}
+                  // src={`https://cdn.jsdelivr.net/gh/junho2343/junho2343.github.io/public/assets/gallery/${image.imageName}`}
+                  src={`/assets/gallery/${image.imageName}`}
                   alt="Junho Gallery Image"
                   layout="fill"
                   placeholder="blur"

@@ -1,13 +1,38 @@
 const galleryImageData = [
   {
+    imageName: "IMG_0238.JPG",
+    date: "2018-11-04",
+    tags: ["서울", "하늘공원", "억새"],
+  },
+  {
     imageName: "IMG_0001 3.JPG",
     date: "2020-08-21",
     tags: ["서울", "반포대교"],
   },
   {
+    imageName: "IMG_0964.jpg",
+    date: "2020-12-03",
+    tags: ["부산", "흰여울해안터널"],
+  },
+  {
+    imageName: "IMG_1289.jpg",
+    date: "2020-12-04",
+    tags: ["부산", "해동용궁사"],
+  },
+  {
     imageName: "IMG_2517.jpg",
     date: "2021-03-28",
     tags: ["서울", "경의선 숲길"],
+  },
+  {
+    imageName: "IMG_1994.JPG",
+    date: "2021-07-27",
+    tags: ["강릉"],
+  },
+  {
+    imageName: "IMG_3533.jpg",
+    date: "2021-07-27",
+    tags: ["강릉"],
   },
   {
     imageName: "IMG_7399 2.jpg",
