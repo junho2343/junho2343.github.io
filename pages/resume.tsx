@@ -15,7 +15,7 @@ const About = () => {
       <Head>
         <title>Resume {TITLE_TAG}</title>
       </Head>
-      <h2 className="pt-10">문준호</h2>
+      <h2 className="pt-10 font-[600]">문준호</h2>
       <p>Developer | ✉️ junho234323@gmail.com | 2000.10.15</p>
       {/* <p className="pt-3">
         단축키를 애용하며, 심플한 개발을 위해 노력하는 4년차 풀스택
@@ -47,7 +47,7 @@ const About = () => {
         </p>
       </div>
 
-      <h2 className="pt-10">경력</h2>
+      <h2 className="pt-10 font-[600]">경력</h2>
       <ul>
         {aboutData.career.map((one, index) => (
           <li key={index}>
@@ -63,7 +63,7 @@ const About = () => {
         ))}
       </ul>
 
-      <h2 className="pt-10">수상 & 자격증</h2>
+      <h2 className="pt-10 font-[600]">수상 & 자격증</h2>
       <ul>
         {aboutData.awardsAndCertificate.map((one, index) => (
           <li key={index}>
@@ -74,12 +74,12 @@ const About = () => {
         ))}
       </ul>
 
-      <h2 className="pt-16">프로젝트</h2>
+      <h2 className="pt-16 font-[600]">프로젝트</h2>
       {projectData.map((one, index) => (
         <div key={index} className="pb-6">
-          <h3 className="pt-10 font-[500]">
+          <h3 className="pt-10 font-[600]">
             {one.href ? (
-              <a href={one.href} target="_blank" className="font-[500]">
+              <a href={one.href} target="_blank" className="font-[600]">
                 {one.name}
               </a>
             ) : (
@@ -88,7 +88,7 @@ const About = () => {
             | {one.company} | {one.period}
           </h3>
           <p
-            className="pt-2 font-[100]"
+            className="pt-2 font-[300]"
             dangerouslySetInnerHTML={{ __html: one.content }}
           />
           <div className="pt-2 pb-2">
@@ -116,33 +116,33 @@ const About = () => {
         src="https://img.shields.io/badge/AWS Lambda-FF9900?style=flat-square&logo=AWS Lambda&logoColor=black"
         alt=""
       /> */}
-          <p className="pt-4 text-lg font-[500]">담당 역할 :</p>
+          <p className="pt-4 text-lg font-[600]">담당 역할 :</p>
           <ul>
             {one.detail.myParts.map((one, index) =>
               one.title ? (
-                <li key={index} className="font-[100]">
+                <li key={index} className="font-[300]">
                   {one.title}
 
                   <ul>
                     {one.content.map((one, index) => (
-                      <li key={index} className="font-[100]">
+                      <li key={index} className="font-[300]">
                         {one}
                       </li>
                     ))}
                   </ul>
                 </li>
               ) : (
-                <li key={index} className="font-[100]">
+                <li key={index} className="font-[300]">
                   {one}
                 </li>
               )
             )}
           </ul>
-          <p className="pt-4 text-lg font-[500]">결과 및 성과 :</p>
+          <p className="pt-4 text-lg font-[600]">결과 및 성과 :</p>
 
           <ul>
             {one.detail.resultAndPerformance.map((one, index) => (
-              <li key={index} className="font-[100]">
+              <li key={index} className="font-[300]">
                 {one}
               </li>
             ))}

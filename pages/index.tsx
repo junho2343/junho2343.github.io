@@ -81,7 +81,7 @@ export default function Index({ allPosts, allTags }: Props) {
                   <h4 className="line-clamp-2 mb-2 text-lg font-normal">
                     {one.title}
                   </h4>
-                  <p className="line-clamp-3 text-sm">{one.excerpt}</p>
+                  <p className="line-clamp-3 text-sm font-[300]">{one.excerpt}</p>
 
                   <div className="absolute bottom-3 flex flex-wrap">
                     <span className="bg-slate-100 p-1.5 mr-1 mt-1 rounded text-xs font-normal">
