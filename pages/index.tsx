@@ -10,6 +10,7 @@ import CoverImage from "components/atoms/cover-image";
 import Meta from "components/meta";
 import Tag from "components/atoms/tag";
 import Container from "components/layout/container";
+import Seo from "components/atoms/seo";
 
 type Props = {
   allPosts: Post[];
@@ -34,10 +35,7 @@ export default function Index({ allPosts, allTags }: Props) {
   return (
     <Container>
       <Meta />
-      <Head>
-        <title>개발자 {TITLE_TAG}</title>
-        <meta name="description" content={`개발자 ${TITLE_TAG} | 블로그`} />
-      </Head>
+      <Seo />
 
       <div className="flex flex-wrap pt-4">
         {allTags.map((tag, index) => (
@@ -81,7 +79,9 @@ export default function Index({ allPosts, allTags }: Props) {
                   <h4 className="line-clamp-2 mb-2 text-lg font-normal">
                     {one.title}
                   </h4>
-                  <p className="line-clamp-3 text-sm font-[300]">{one.excerpt}</p>
+                  <p className="line-clamp-3 text-sm font-[300]">
+                    {one.excerpt}
+                  </p>
 
                   <div className="absolute bottom-3 flex flex-wrap">
                     <span className="bg-slate-100 p-1.5 mr-1 mt-1 rounded text-xs font-normal">

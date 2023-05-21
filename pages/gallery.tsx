@@ -6,6 +6,7 @@ import { getAllGalleryImages } from "lib/api";
 import { TITLE_TAG } from "lib/constants";
 import Meta from "components/meta";
 import Container from "components/layout/container";
+import Seo from "components/atoms/seo";
 
 type Props = {
   allGalleryImages: {
@@ -20,10 +21,7 @@ export default function Gallery({ allGalleryImages }: Props) {
   return (
     <Container className="max-w-[1600px]">
       <Meta />
-      <Head>
-        <title>갤러리 {TITLE_TAG}</title>
-        <meta name="description" content={`갤러리 ${TITLE_TAG}`} />
-      </Head>
+      <Seo title="갤러리" description="추억 가득 갤러리" tags={["갤러리"]} />
       <div className="columns-[320px] gap-0">
         {allGalleryImages.map((image, index) => (
           <div className="p-[8px]" key={index}>

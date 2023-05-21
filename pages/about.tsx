@@ -4,14 +4,13 @@ import { TITLE_TAG } from "lib/constants";
 import Meta from "components/meta";
 import aboutData from "_data/about";
 import Container from "components/layout/container";
+import Seo from "components/atoms/seo";
 
 const About = () => {
   return (
     <Container>
       <Meta />
-      <Head>
-        <title>About Me {TITLE_TAG}</title>
-      </Head>
+      <Seo title="About" tags={["소개", "프로필"]} />
       <h2 className="pt-10">문준호</h2>
       <p>Developer | ✉️ junho234323@gmail.com | 2000.10.15</p>
 

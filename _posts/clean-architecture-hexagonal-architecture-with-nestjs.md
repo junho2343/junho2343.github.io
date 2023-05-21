@@ -1,5 +1,5 @@
 ---
-title: "클린 아키텍처(헥사고날 아키텍처) 알아보기 | with NestJS"
+title: "클린 아키텍처(헥사고날 아키텍처) 알아보기 with NestJS"
 excerpt: "아키텍처 패턴 중 하나이기에 주관적이며 애매합니다. 이런 애매한 부분들을 추구하는 원칙에 벗어나지 않는 선에서, 저만의 기준을 세워 정리하고 구현하였음을 참고해 주세요."
 coverImage: "/assets/blog/clean-architecture(hexagonal-architecture)-with-nestjs/2.png"
 date: "2023-03-10"

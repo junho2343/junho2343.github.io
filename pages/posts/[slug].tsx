@@ -17,6 +17,7 @@ import Meta from "components/meta";
 import Utterances from "components/atoms/utterances";
 import Tag from "components/atoms/tag";
 import Container from "components/layout/container";
+import Seo from "components/atoms/seo";
 
 type Props = {
   post: PostType;
@@ -99,13 +100,14 @@ export default function Post({ post, morePosts, preview }: Props) {
           <>Loading…</>
         ) : (
           <article className="mb-32">
-            <Head>
-              <title>
-                {post.title} {TITLE_TAG}
-              </title>
-              <meta property="og:image" content={post.coverImage} />
-              <meta name="description" content={post.excerpt} />
-            </Head>
+            <Seo
+              title={post.title}
+              description={post.excerpt}
+              tags={post.tags}
+              image={post.coverImage}
+              publishedTime={post.date}
+            />
+
             <div className="pb-3">
               <h1>{post.title}</h1>
               <div className="mt-1 mb-6">
