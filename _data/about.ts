@@ -3,6 +3,12 @@ import AboutType from "interfaces/about";
 const aboutData: AboutType = {
   career: [
     {
+      companyName: "(주)넥슨코리아",
+      period: "2023.05 ~ (재직중)",
+      href: "https://company.nexon.com/",
+      summary: [],
+    },
+    {
       companyName: "(주)플레이오토",
       period: "2018.12 ~ 2022.10 (3년 10개월)",
       href: "https://plto.com/",
