@@ -16,7 +16,7 @@ const About = () => {
         <title>Resume {TITLE_TAG}</title>
       </Head>
       <h2 className="pt-10 font-[600]">문준호</h2>
-      <p>Developer | ✉️ junho234323@gmail.com | 2000.10.15</p>
+      <p>Developer | ✉️ junho2343.dev@gmail.com | 2000.10.15</p>
       {/* <p className="pt-3">
         단축키를 애용하며, 심플한 개발을 위해 노력하는 4년차 풀스택
         개발자입니다.

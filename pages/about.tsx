@@ -12,7 +12,7 @@ const About = () => {
       <Meta />
       <Seo title="About" tags={["소개", "프로필"]} />
       <h2 className="pt-10">문준호</h2>
-      <p>Developer | ✉️ junho234323@gmail.com | 2000.10.15</p>
+      <p>Developer | ✉️ junho2343.dev@gmail.com | 2000.10.15</p>
 
       <h2 className="pt-10">경력</h2>
       <ul>

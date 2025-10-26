@@ -21,8 +21,15 @@ const aboutData: AboutType = {
     },
   ],
   awardsAndCertificate: [
+    
+
     {
-      name: "AWS 공인 솔루션스 아키텍트 – 어소시에이트",
+      name: "AWS Certified Solutions Architect - Professional",
+      href: "https://www.credly.com/badges/4b75dc8f-9b80-4c2d-81ba-293af99c44dc/public_url",
+      period: "2025.10",
+    },
+    {
+      name: "AWS Certified Solutions Architect - Associate",
       href: "https://www.credly.com/badges/647c637d-ccd4-4b56-bc45-058606547fa4/public_url",
       period: "2022.04",
     },
