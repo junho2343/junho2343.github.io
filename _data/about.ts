@@ -21,8 +21,6 @@ const aboutData: AboutType = {
     },
   ],
   awardsAndCertificate: [
-    
-
     {
       name: "AWS Certified Solutions Architect - Professional",
       href: "https://www.credly.com/badges/4b75dc8f-9b80-4c2d-81ba-293af99c44dc/public_url",
@@ -42,6 +40,16 @@ const aboutData: AboutType = {
       name: "서울 지방기능경기대회 웹개발 부문 은메달",
       href: "https://meister.hrdkorea.or.kr/sub/3/2/1/20160512110924569100_view.do",
       period: "2018.04",
+    },
+  ],
+  etc: [
+    {
+      name: "Life Timeline",
+      href: "https://life-timeline.com/share/2e1cbc02-2f50-4d85-8cc5-f6822192da27",
+    },
+    {
+      name: "meta-tft",
+      href: "https://meta-tft.com",
     },
   ],
 };

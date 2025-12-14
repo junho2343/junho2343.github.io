@@ -3,6 +3,7 @@ import React from "react";
 type AboutType = {
   career: Career[];
   awardsAndCertificate: AwardsAndCertificate[];
+  etc: Etc[];
 };
 
 type Career = {
@@ -15,6 +16,11 @@ type Career = {
 type AwardsAndCertificate = {
   name: string;
   period: string;
+  href: string;
+};
+
+type Etc = {
+  name: string;
   href: string;
 };
 

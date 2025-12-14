@@ -35,6 +35,22 @@ const About = () => {
           </li>
         ))}
       </ul>
+
+      <h2 className="pt-10">기타</h2>
+      <ul>
+        {aboutData.etc.map((one, index) => (
+          <li key={index}>
+            <strong>{one.name}</strong>
+            <ul>
+              <li>
+                <a href={one.href} target="_blank">
+                  {one.href}
+                </a>
+              </li>
+            </ul>
+          </li>
+        ))}
+      </ul>
       {/* <Head>
     <title>Next.js Blog Example with {CMS_NAME}</title>
   </Head> */}
