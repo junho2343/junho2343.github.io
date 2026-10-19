@@ -44,8 +44,8 @@ const aboutData: AboutType = {
   ],
   etc: [
     {
-      name: "Life Timeline",
-      href: "https://life-timeline.com/share/2e1cbc02-2f50-4d85-8cc5-f6822192da27",
+      name: "https://life-timeline.com/@junho2343",
+      href: "https://life-timeline.com/@junho2343",
     },
     {
       name: "meta-tft",
