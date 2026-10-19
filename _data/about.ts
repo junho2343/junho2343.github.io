@@ -44,11 +44,11 @@ const aboutData: AboutType = {
   ],
   etc: [
     {
-      name: "https://life-timeline.com/@junho2343",
+      name: "Life Timeline",
       href: "https://life-timeline.com/@junho2343",
     },
     {
-      name: "meta-tft",
+      name: "Meta-TFT",
       href: "https://meta-tft.com",
     },
   ],
